@@ -11,6 +11,7 @@ setTransform = function (e, v) {
 
 (function () {
   var books = document.querySelectorAll(".book");
+  var cardPage = document.querySelector("#myBook > div");
 
   for (var i = 0; i < books.length; i++) {
     var book = books[i];
@@ -18,6 +19,8 @@ setTransform = function (e, v) {
     for (var j = 0; j < pages.length; j++) {
       if (pages[j].tagName == "DIV") {
         setTransform(pages[j], "translate3d(0px, 0px, " + -j + "px)");
+        // setTransform(pages[j], 'rotateX('+rotX+'deg) rotateY('+rotY+'deg)');
+        setTransform(cardPage, "rotateX(15deg) rotateZ(-10deg)");
       }
     }
   }
@@ -49,34 +52,43 @@ setTransform = function (e, v) {
     down = false;
   };
 
-  window.onmousemove = function (ev) {
-    if (down) {
-      var x = ev.clientX;
-      var y = ev.clientY;
-      var dx = x - px;
-      var dy = y - py;
-      px = x;
-      py = y;
-      cancel = cancel || (x - sx) * (x - sx) + (y - sy) * (y - sy) > 25;
-      rotX -= dy * 1;
-      rotY -= dx * 1;
-      setTransform(
-        cardPage,
-        "rotateX(" + rotX + "deg) rotateY(" + rotY + "deg)"
-      );
-      ev.preventDefault();
-    }
-  };
+  // window.onmousemove = function(ev) {
+  //   if (down) {
+  //     var x = ev.clientX;
+  //     var y = ev.clientY;
+  //     var dx = x-px;
+  //     var dy = y-py;
+  //     px = x;
+  //     py = y;
+  //     cancel = cancel || ((x-sx)*(x-sx)+(y-sy)*(y-sy) > 25);
+  //     rotX -= dy * 1;
+  //     rotY -= dx * 1;
+  //     setTransform(cardPage, 'rotateX('+rotX+'deg) rotateY('+rotY+'deg)');
+  //     ev.preventDefault();
+  //   }
+  // };
 
-  window.onclick = function (ev) {
-    if (cancel) return;
-    if (ev.clientX < 600) {
-      previousPage();
-    } else {
-      nextPage();
-    }
-    ev.preventDefault();
-  };
+  // window.onclick = function (ev) {
+  //   if (cancel) return;
+  //   if (ev.clientX < 600) {
+  //     previousPage();
+  //   } else {
+  //     nextPage();
+  //   }
+  //   ev.preventDefault();
+  // };
+
+  const buttonNext = document.querySelector("button.button__next");
+  const buttonPrevious = document.querySelector("button.button__previous");
+
+  buttonNext.addEventListener("click", (event) => {
+    nextPage();
+    buttonNext.textContent = "turn to next page";
+  });
+
+  buttonPrevious.addEventListener("click", (event) => {
+    previousPage();
+  });
 
   var previousPage = function () {
     if (currentPage > 0) {
@@ -100,6 +112,7 @@ setTransform = function (e, v) {
   return;
 
   /* deprecated draggable page-turner
+
 window.onmousemove = function(ev) {
   if (down) {
     var x = ev.clientX;
