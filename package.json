@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "An interactive storybook built with p5.js",
   "main": "index.html",
+  "devDependencies": {
+    "git-scripts": "0.2.1",
+    "surge": "latest"
+  },
   "git": {
     "scripts": {
       "post-commit": "npm run deploy",
