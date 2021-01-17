@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "description": "An interactive storybook built with p5.js",
   "main": "index.html",
-  "git": {
-    "scripts": {
-      "post-commit": "npm run deploy",
-      "pre-push": "npm run deploy"
-    }
+  "devDependencies": {
+    "git-scripts": "0.2.1",
+    "surge": "latest"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
