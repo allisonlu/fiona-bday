@@ -96,6 +96,29 @@ body {
   flex: 40%;
 }
 
+.col-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.col-right, .col-left {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.col-right {
+  text-align: left;
+}
+.col-left {
+  text-align: right;
+  margin: 0 20px 0 0;
+
+}
+
 #myBook {
   top: 70px;
   position: absolute;
@@ -281,4 +304,8 @@ h1 {
 
 .book-pages p {
   text-align: left;
+}
+
+h3 {
+  margin: 14px 0 5px;
 }
