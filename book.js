@@ -9,9 +9,9 @@ setTransform = function (e, v) {
   s.webkitTransform = s.MozTransform = s.msTransform = s.OTransform = s.transform = v;
 };
 
+// add space in between pages so the stack of papers looks like a book
 (function () {
   var books = document.querySelectorAll(".book");
-  var cardPage = document.querySelector("#myBook > div");
 
   for (var i = 0; i < books.length; i++) {
     var book = books[i];
@@ -19,11 +19,15 @@ setTransform = function (e, v) {
     for (var j = 0; j < pages.length; j++) {
       if (pages[j].tagName == "DIV") {
         setTransform(pages[j], "translate3d(0px, 0px, " + -j + "px)");
-        // setTransform(pages[j], 'rotateX('+rotX+'deg) rotateY('+rotY+'deg)');
-        setTransform(cardPage, "rotateX(15deg) rotateZ(-10deg)");
       }
     }
   }
+})();
+
+// set viewing angle of book
+(function () {
+  var cardPage = document.querySelector("#myBook > div");
+  setTransform(cardPage, "rotateX(23deg) rotateZ(-7deg) rotateY(-5deg)");
 })();
 
 (function () {
@@ -40,17 +44,62 @@ setTransform = function (e, v) {
   var pages = document.querySelectorAll("#myBook > div > div");
   var currentPage = 0;
 
-  window.onmousedown = function (ev) {
-    down = true;
-    cancel = false;
-    sx = px = ev.clientX;
-    sy = py = ev.clientY;
-    ev.preventDefault();
+  // button page turners
+  const buttonNext = document.querySelector("button.button__next");
+  const buttonPrevious = document.querySelector("button.button__previous");
+
+  buttonNext.addEventListener("click", (event) => {
+    nextPage();
+    buttonNext.textContent = "turn to next page";
+  });
+
+  buttonPrevious.addEventListener("click", (event) => {
+    previousPage();
+  });
+
+  let myBook = document.getElementById("myBook");
+
+  var previousPage = function () {
+    if (currentPage > 0) {
+      currentPage--;
+      setTransform(
+        pages[currentPage],
+        "translate3d(0px,0px," + -currentPage + "px) rotateY(0deg)"
+      );
+    }
+    if (currentPage == 0) {
+      console.log("on the cover");
+      myBook.style.right = "500px";
+    }
   };
 
-  window.onmouseup = function (ev) {
-    down = false;
+  var nextPage = function () {
+    if (currentPage < pages.length) {
+      setTransform(
+        pages[currentPage],
+        "translate3d(0px,0px," + currentPage + "px) rotateY(-160deg)"
+      );
+
+      // book starts centered in screen. when book opens, it shifts to the right
+      myBook.style.right = "100px";
+      currentPage++;
+    }
   };
+
+  return;
+
+  // book click and drag functionality
+  // window.onmousedown = function (ev) {
+  //   down = true;
+  //   cancel = false;
+  //   sx = px = ev.clientX;
+  //   sy = py = ev.clientY;
+  //   ev.preventDefault();
+  // };
+
+  // window.onmouseup = function (ev) {
+  //   down = false;
+  // };
 
   // window.onmousemove = function(ev) {
   //   if (down) {
@@ -77,39 +126,6 @@ setTransform = function (e, v) {
   //   }
   //   ev.preventDefault();
   // };
-
-  const buttonNext = document.querySelector("button.button__next");
-  const buttonPrevious = document.querySelector("button.button__previous");
-
-  buttonNext.addEventListener("click", (event) => {
-    nextPage();
-    buttonNext.textContent = "turn to next page";
-  });
-
-  buttonPrevious.addEventListener("click", (event) => {
-    previousPage();
-  });
-
-  var previousPage = function () {
-    if (currentPage > 0) {
-      currentPage--;
-      setTransform(
-        pages[currentPage],
-        "translate3d(0px,0px," + -currentPage + "px) rotateY(0deg)"
-      );
-    }
-  };
-  var nextPage = function () {
-    if (currentPage < pages.length) {
-      setTransform(
-        pages[currentPage],
-        "translate3d(0px,0px," + currentPage + "px) rotateY(-150deg)"
-      );
-      currentPage++;
-    }
-  };
-
-  return;
 
   /* deprecated draggable page-turner
 

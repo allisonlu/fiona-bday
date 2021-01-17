@@ -1,5 +1,6 @@
 html {
-  width: 50%;
+  /* width: 50%; */
+  width: 1000px;
   height: 100%;
   font-family: Times;
   font-size: 16px;
@@ -15,7 +16,7 @@ body {
     center,
     ellipse cover,
     #f1d8c1 0%,
-    #F9B9C3 100%
+    #f9b9c3 100%
   ); /* FF3.6+ */
   background: -webkit-gradient(
     radial,
@@ -30,31 +31,31 @@ body {
     center,
     ellipse cover,
     #f1d8c1 0%,
-    #F9B9C3 100%
+    #f9b9c3 100%
   ); /* Chrome10+,Safari5.1+ */
   background: -o-radial-gradient(
     center,
     ellipse cover,
     #f1d8c1 0%,
-    #F9B9C3 100%
+    #f9b9c3 100%
   ); /* Opera 12+ */
   background: -ms-radial-gradient(
     center,
     ellipse cover,
     #f1d8c1 0%,
-    #F9B9C3 100%
+    #f9b9c3 100%
   ); /* IE10+ */
   background: radial-gradient(
     ellipse at center,
     #f1d8c1 0%,
-    #F9B9C3 100%
+    #f9b9c3 100%
   ); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1d8c1', endColorstr='#F9B9C3',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  -webkit-perspective: 800px;
-  -moz-perspective: 800px;
-  -ms-perspective: 800px;
-  -o-perspective: 800px;
-  perspective: 800px;
+  -webkit-perspective: 2300px;
+  -moz-perspective: 2300px;
+  -ms-perspective: 2300px;
+  -o-perspective: 2300px;
+  perspective: 2300px;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
@@ -63,7 +64,7 @@ body {
 }
 
 .button__navigation {
-  position: absolute;
+  /* position: absolute; */
   right: 50px;
   /* width: 100%; */
 }
@@ -84,45 +85,43 @@ body {
   display: inline-block;
 } */
 
+/* page layout  */
 .row {
   display: flex;
 }
-
 .column-60 {
   flex: 60%;
 }
-
 .column-40 {
   flex: 40%;
 }
 
+/* 2 col layout used on credits page  */
 .col-wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
 }
-
-.col-right, .col-left {
+.col-right,
+.col-left {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
 }
-
 .col-right {
   text-align: left;
 }
 .col-left {
   text-align: right;
   margin: 0 20px 0 0;
-
 }
 
 #myBook {
-  top: 70px;
-  position: absolute;
-  left: 500px;
+  top: 120px;
+  right: 500px;
+  transition: right 0.5s;
   -webkit-transform: rotate3d(-1.8, -1, 0.6, 20deg);
   -moz-transform: rotate3d(-1.8, -1, 0.6, 20deg);
   -ms-transform: rotate3d(-1.8, -1, 0.6, 20deg);
@@ -188,14 +187,10 @@ body {
     #ffffff 0%,
     #e5e5e5 100%
   ); /* Opera 11.10+ */
-  background: -ms-linear-gradient(
-    -45deg,
-    #ffffff 0%,
-    #e5e5e5 100%
-  ); /* IE10+ */
+  background: -ms-linear-gradient(-45deg, #ffffff 0%, #e5e5e5 100%); /* IE10+ */
   background: linear-gradient(135deg, #ffffff 0%, #e5e5e5 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  width: 400px;
+  width: 700px;
   height: 600px;
   position: absolute;
   overflow: hidden;
@@ -236,14 +231,10 @@ body {
     #ffffff 0%,
     #e5e5e5 100%
   ); /* Opera 11.10+ */
-  background: -ms-linear-gradient(
-    -45deg,
-    #ffffff 0%,
-    #e5e5e5 100%
-  ); /* IE10+ */
+  background: -ms-linear-gradient(-45deg, #ffffff 0%, #e5e5e5 100%); /* IE10+ */
   background: linear-gradient(135deg, #ffffff 0%, #e5e5e5 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  width: 400px;
+  width: 700px;
   height: 600px;
   position: absolute;
   -webkit-transform: rotateY(180deg);
@@ -284,11 +275,7 @@ body {
     #8c9ccc 0%,
     #080f40 100%
   ); /* Opera 11.10+ */
-  background: -ms-linear-gradient(
-    -45deg,
-    #8c9ccc 0%,
-    #080f40 100%
-  ); /* IE10+ */
+  background: -ms-linear-gradient(-45deg, #8c9ccc 0%, #080f40 100%); /* IE10+ */
   background: linear-gradient(135deg, #8c9ccc 0%, #080f40 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8C9CCC', endColorstr='#080f40',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   color: #000;
