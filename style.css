@@ -1,5 +1,6 @@
 html {
-  width: 50%;
+  /* width: 50%; */
+  width: 1000px;
   height: 100%;
   font-family: Times;
   font-size: 16px;
@@ -15,7 +16,7 @@ body {
     center,
     ellipse cover,
     #f1d8c1 0%,
-    #F9B9C3 100%
+    #f9b9c3 100%
   ); /* FF3.6+ */
   background: -webkit-gradient(
     radial,
@@ -30,31 +31,31 @@ body {
     center,
     ellipse cover,
     #f1d8c1 0%,
-    #F9B9C3 100%
+    #f9b9c3 100%
   ); /* Chrome10+,Safari5.1+ */
   background: -o-radial-gradient(
     center,
     ellipse cover,
     #f1d8c1 0%,
-    #F9B9C3 100%
+    #f9b9c3 100%
   ); /* Opera 12+ */
   background: -ms-radial-gradient(
     center,
     ellipse cover,
     #f1d8c1 0%,
-    #F9B9C3 100%
+    #f9b9c3 100%
   ); /* IE10+ */
   background: radial-gradient(
     ellipse at center,
     #f1d8c1 0%,
-    #F9B9C3 100%
+    #f9b9c3 100%
   ); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1d8c1', endColorstr='#F9B9C3',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  -webkit-perspective: 800px;
-  -moz-perspective: 800px;
-  -ms-perspective: 800px;
-  -o-perspective: 800px;
-  perspective: 800px;
+  -webkit-perspective: 2300px;
+  -moz-perspective: 2300px;
+  -ms-perspective: 2300px;
+  -o-perspective: 2300px;
+  perspective: 2300px;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
@@ -63,7 +64,7 @@ body {
 }
 
 .button__navigation {
-  position: absolute;
+  /* position: absolute; */
   right: 50px;
   /* width: 100%; */
 }
@@ -84,45 +85,43 @@ body {
   display: inline-block;
 } */
 
+/* page layout  */
 .row {
   display: flex;
 }
-
 .column-60 {
   flex: 60%;
 }
-
 .column-40 {
   flex: 40%;
 }
 
+/* 2 col layout used on credits page  */
 .col-wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
 }
-
-.col-right, .col-left {
+.col-right,
+.col-left {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
 }
-
 .col-right {
   text-align: left;
 }
 .col-left {
   text-align: right;
   margin: 0 20px 0 0;
-
 }
 
 #myBook {
-  top: 70px;
-  position: absolute;
-  left: 500px;
+  top: 120px;
+  left: 400px;
+  transition: left 0.5s;
   -webkit-transform: rotate3d(-1.8, -1, 0.6, 20deg);
   -moz-transform: rotate3d(-1.8, -1, 0.6, 20deg);
   -ms-transform: rotate3d(-1.8, -1, 0.6, 20deg);
@@ -188,15 +187,11 @@ body {
     #ffffff 0%,
     #e5e5e5 100%
   ); /* Opera 11.10+ */
-  background: -ms-linear-gradient(
-    -45deg,
-    #ffffff 0%,
-    #e5e5e5 100%
-  ); /* IE10+ */
+  background: -ms-linear-gradient(-45deg, #ffffff 0%, #e5e5e5 100%); /* IE10+ */
   background: linear-gradient(135deg, #ffffff 0%, #e5e5e5 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  width: 400px;
-  height: 600px;
+  width: 550px;
+  height: 350px;
   position: absolute;
   overflow: hidden;
   -webkit-transform: translate3d(0px, 0px, 0.02px);
@@ -206,7 +201,7 @@ body {
   transform: translate3d(0px, 0px, 0.02px);
   padding: 30px;
   padding-left: 40px;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
   border-left: 2px solid #000;
 }
 
@@ -236,15 +231,11 @@ body {
     #ffffff 0%,
     #e5e5e5 100%
   ); /* Opera 11.10+ */
-  background: -ms-linear-gradient(
-    -45deg,
-    #ffffff 0%,
-    #e5e5e5 100%
-  ); /* IE10+ */
+  background: -ms-linear-gradient(-45deg, #ffffff 0%, #e5e5e5 100%); /* IE10+ */
   background: linear-gradient(135deg, #ffffff 0%, #e5e5e5 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  width: 400px;
-  height: 600px;
+  width: 550px;
+  height: 350px;
   position: absolute;
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -254,7 +245,7 @@ body {
   overflow: hidden;
   padding: 30px;
   padding-right: 40px;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
   border-right: 2px solid #000;
 }
 
@@ -284,11 +275,7 @@ body {
     #8c9ccc 0%,
     #080f40 100%
   ); /* Opera 11.10+ */
-  background: -ms-linear-gradient(
-    -45deg,
-    #8c9ccc 0%,
-    #080f40 100%
-  ); /* IE10+ */
+  background: -ms-linear-gradient(-45deg, #8c9ccc 0%, #080f40 100%); /* IE10+ */
   background: linear-gradient(135deg, #8c9ccc 0%, #080f40 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8C9CCC', endColorstr='#080f40',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   color: #000;
@@ -297,15 +284,165 @@ body {
   margin-top: -1px;
 }
 
-h1 {
-  margin-top: 200px;
-  font-family: Cochin, sans-serif;
+/* default font sizes and spacings  */
+h1,
+h2,
+h3 {
+  margin: 0 0 10px;
 }
 
-.book-pages p {
-  text-align: left;
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 25px;
+  font-family: "Mali", cursive;
 }
 
 h3 {
   margin: 14px 0 5px;
+  font-size: 20px;
+}
+
+/* cover and title pages */
+.book p {
+  font-family: "Gochi Hand", cursive;
+}
+
+.book h1 {
+  font-family: "Aclonica", sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 25px;
+  font-weight: bold;
+  text-shadow: 2px 2px 0px #2d3c66, 4px 4px 0px #2d3c66, 6px 6px 0px #2d3c66;
+  color: #ffffff;
+}
+
+.book .rainbow {
+  /* height: 90vh; */
+  line-height: .1vh;
+  color: #ffffff;
+  font-family: "Gochi Hand", cursive;
+  text-shadow: 2px 2px 0px #eb452b, 4px 4px 0px #efa032, 6px 6px 0px #46b59b,
+    8px 8px 0px #017e7f, 10px 10px 0px #052939, 12px 12px 0px #2d3c66,
+    14px 14px 0px #2d3c66, 16px 16px 0px #2d3c66, 18px 18px 0px #2d3c66;
+  transform: rotate(-0.025turn);
+}
+
+.title {
+  background-color: #cfd6ea;
+}
+.title h1 {
+  color: #000000;
+  text-shadow: 2px 2px 0px #cfd6ea, 4px 4px 0px #cfd6ea, 6px 6px 0px #cfd6ea;
+}
+
+.title .rainbow {
+  text-shadow: -0.5px -0.5px 0px #cfd6ea, 2px 2px 0px #eb452b, 4px 4px 0px #efa032, 6px 6px 0px #46b59b,
+  8px 8px 0px #017e7f, 10px 10px 0px #052939, 12px 12px 0px #cfd6ea,
+  14px 14px 0px #cfd6ea, 16px 16px 0px #cfd6ea, 18px 18px 0px #cfd6ea;
+}
+
+p {
+  text-align: center;
+  font-family: "Helvetica";
+  font-size: 0.8rem;
+}
+
+a {
+  color: #d52e3f;
+  text-decoration: none;
+  font-family: "Niconne", cursive;
+  font-size: 1.2rem;
+}
+
+.book h2 {
+  /* font-family: 'Gochi Hand', cursive; */
+  font-family: "Aclonica", sans-serif;
+  font-size: 20px;
+  text-transform: lowercase;
+}
+
+/* story pages  */
+.book-pages p {
+  font-family: "Mali", cursive;
+  text-align: left;
+  font-size: 15px;
+  margin: 10px 0 0;
+  line-height: 20px;
+}
+
+.book-pages h2 {
+  font-family: "Gochi Hand", cursive;
+  font-size: 25px;
+}
+
+/* utility classes for justifying text  */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.bottom {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.chapter-title {
+  position: absolute;
+  top: 30px;
+  left: 270px;
+}
+
+.quote--arthur {
+  font-family: "Reenie Beanie", cursive;
+  color: #ed2626;
+  font-size: 26px;
+  line-height: 28px;
+}
+
+.quote--merlin {
+  font-family: "Sacramento", cursive;
+  color: #ed51d3;
+  font-size: 26px;
+  line-height: 28px;
+}
+
+@font-face {
+  font-family: OldeEnglishRegular;
+  src: url(./assets/fonts/OldeEnglishRegular.ttf);
+  font-size: 26px;
+}
+
+.quote--alissa {
+  color: #8c66b2;
+  font-family: OldeEnglishRegular, cursive;
+  font-size: 26px;
+  line-height: 28px;
+}
+
+.quote--hotdog {
+  font-family: "Gochi Hand", cursive;
+  color: #26ed4e;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.quote--wxtches {
+  font-family: "Gochi Hand", cursive;
+  color: #26dced;
+  font-size: 26px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+/* styling specific to the credits page to get the content to fit nicely  */
+.credits {
+  font-family: "Gochi Hand", cursive;
 }

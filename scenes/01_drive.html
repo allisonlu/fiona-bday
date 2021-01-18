@@ -35,7 +35,7 @@
 
         // edit background imgs
         sweetwater.resize(0, canvas_width);
-        sweetwater.filter(ERODE);
+        // sweetwater.filter(ERODE);
 
         // resize car png
         car_img.resize(0, 50);
@@ -48,7 +48,7 @@
       function draw() {
         background(sweetwater);
         textSize(32);
-        textAlign(LEFT, TOP);
+        // textAlign(LEFT, TOP);
         fill(255);
         text("click to move car",
           width/3, height*0.1);

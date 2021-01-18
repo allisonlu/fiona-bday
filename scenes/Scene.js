@@ -8,12 +8,12 @@
 
 */
 
-class Scene {
-  constructor(img) {
-    this.img = img;
-  }
+// class Scene {
+//   constructor(img) {
+//     this.img = img;
+//   }
 
-  start() {
-    background(this.img);
-  }
-}
+//   start() {
+//     background(this.img);
+//   }
+// }
