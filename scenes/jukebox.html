@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+  <head>
+    <script type="text/javascript" src="../libraries/p5.min.js"></script>
+    <script type="text/javascript" src="../libraries/p5.play.js"></script>
+    <script type="text/javascript" src="../libraries/p5.sound.min.js"></script>
+    <style>
+      html, body {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        background:white;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+    
+      /****
+        SCENE 3: song selector for jukebox
+      ****/
+
+      // Canvas variables
+      const canvas_height = 400;
+      const canvas_width = 400;
+
+      // Song variables
+      const song_info = [
+        {
+          'name': 'Just Like a Rainbow',
+          'artist': 'The Columbians',
+          'path': 'the_columbians_-_just_like_a_rainbow.mp3'
+        },
+        {
+          'name': 'Sofia (Slowed + Reverb)',
+          'artist': 'Clairo',
+          'path': 'clairo_-_sofia_(slowed_+_reverb).mp3'
+        },        {
+          'name': 'Baby Won\'t You Please Come Home',
+          'artist': 'Eva Taylor',
+          'path': 'eva_taylor_-_baby_won\'t_you_please_come_home.mp3'
+        },
+      ]
+      let song_array = []; // for p5 sound objects 
+      let current_song, song_index = 0;
+
+      // Jukebox and control variables
+      let jukebox, play_pause;
+      let slider, jump_button;
+      let img, amp;
+      let positionX = canvas_width; // for marquee
+
+      function preload() {
+        // load songs into p5 sound object array
+        for (let i=0; i<song_info.length; i++) {
+          song_array.push(loadSound('../audio/' + song_info[i].path));
+        }
+
+        note = loadImage('../img/musical-note.png')
+      }
+
+      function setup() {
+        createCanvas(canvas_width, canvas_height);
+        // background(51);
+
+        /*
+          CONTROLS
+        */
+       
+        // play/pause button
+        play_pause = createButton('play');
+        play_pause.position(width/2-20, height/2-20);
+        play_pause.mousePressed(togglePlay);
+
+        // next button
+        skip = createButton('next');
+        skip.position(width/2-20, height/2+20);
+        skip.mousePressed(toggleSkip);
+
+        // jump to random part of song
+        jump_button = createButton('jump to random part of song');
+        jump_button.position(width/2-90, height/2+90);
+        jump_button.mousePressed(jumpSong);
+
+        // volume slider
+        slider = createSlider(0, 1, 0.5, 0.01);
+
+        // amplitude visual
+        amp = new p5.Amplitude();
+      }
+
+      function draw() {
+        background(255);
+
+        // jukebox
+        fill(48, 37, 11);
+        rect((width/4)+20, (height/4)-10, 200, 300, 100, 100, 0, 0);
+        fill(82, 63, 18);
+        jukebox = rect(width/4, height/4, 200, 300, 100, 100, 0, 0);
+
+        // fun amplitude viz
+        let level = amp.getLevel();
+        let size = map(level, 0, 1, 100, 400);
+        fill(235);
+        image(note, width/2.5-20, height/3, size, size);
+
+        // display song title
+        current_song = song_array[song_index];
+        displayAll();
+        displayCurrent();
+
+        // volume control
+        fill(0);
+        textSize(14);
+        text('volume: ', 0, height);
+        current_song.setVolume(slider.value());
+      }
+
+      function togglePlay() {
+        if (!current_song.isPlaying()) {
+          current_song.play();
+          play_pause.html('pause');
+        } else {
+          current_song.pause();
+          play_pause.html('play');
+        }
+      }
+
+      function toggleSkip() {
+        if (current_song.isPlaying) {
+          current_song.stop();
+          play_pause.html('play');
+
+          if (song_index < song_array.length-1) {
+            song_index++;
+          }
+          else if (song_index == song_array.length-1) {
+            song_index = 0;
+          }
+        }
+      }
+
+      function jumpSong() {
+        let len = current_song.duration(); //type: seconds
+        let t = random(len); 
+        current_song.jump(t);
+      }
+
+      function displayAll() {
+        textSize(14);
+        fill(0);
+        text('playlist: ', 20, 20);
+
+        let display_height = 50;
+      
+        for (let i=0; i<song_info.length; i++) {
+          text('track ' + (i+1) + ': ' + song_info[i].name + ' - ' + song_info[i].artist, 20, display_height);
+          display_height += 15;
+        }
+      }
+
+      function displayCurrent() {
+        textSize(24);
+        fill(0);
+
+        if (positionX < -250) {
+          positionX = width;
+        }
+
+        text('now playing: ' + song_info[song_index].name + ' - ' + song_info[song_index].artist, positionX--, 350);
+      }
+
+    </script>
+  </body>
+</html>
