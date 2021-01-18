@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <script type="text/javascript" src="../libraries/p5.min.js"></script>
+    <script type="text/javascript" src="../libraries/p5.play.js"></script>
+    <script type="text/javascript" src="Scene.js"></script>
+    <style>
+      html, body {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        background:white;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+    
+      /****
+        SCENE 1: driving through gayborhood
+      ****/
+
+      const canvas_height = 400;
+      const canvas_width = 400;
+
+      let car, car_img, key;
+
+      function preload() {
+        car_img = loadImage('../img/car.png');
+      }
+
+      function setup() {
+        createCanvas(canvas_width, canvas_height);
+
+        // resize car png
+        car_img.resize(0, 90);
+        // create sprite with image of car
+        car = createSprite(50, height/2); // set initial position
+        car.addImage(car_img);
+
+        key = createSprite(150, 150, 10, 10);
+        key.shapeColor = color(255);
+      }
+
+      function draw() {
+        background(50);
+        textSize(12);
+        fill(255);
+        text("key -> car",
+          width/3, height*0.1);
+
+        key.velocity.x = (mouseX - key.position.x) * 0.2;
+        key.velocity.y = (mouseY - key.position.y) * 0.2;
+
+        key.overlap(car, startCar);
+
+        drawSprites();
+
+      }
+
+      function startCar(key, car) {
+        //remove key sprite
+        key.remove();
+        //make car go
+        car.setSpeed(1.5, 0);
+      }
+
+    </script>
+  </body>
+</html>
