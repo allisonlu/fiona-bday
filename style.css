@@ -314,6 +314,47 @@ h3 {
   font-family: "Aclonica", sans-serif;
   text-transform: uppercase;
   margin: 0 0 25px;
+  font-weight: bold;
+  text-shadow: 2px 2px 0px #2d3c66, 4px 4px 0px #2d3c66, 6px 6px 0px #2d3c66;
+  color: #ffffff;
+}
+
+.book .rainbow {
+  /* height: 90vh; */
+  line-height: .1vh;
+  color: #ffffff;
+  font-family: "Gochi Hand", cursive;
+  text-shadow: 2px 2px 0px #eb452b, 4px 4px 0px #efa032, 6px 6px 0px #46b59b,
+    8px 8px 0px #017e7f, 10px 10px 0px #052939, 12px 12px 0px #2d3c66,
+    14px 14px 0px #2d3c66, 16px 16px 0px #2d3c66, 18px 18px 0px #2d3c66;
+  transform: rotate(-0.025turn);
+}
+
+.title {
+  background-color: #cfd6ea;
+}
+.title h1 {
+  color: #000000;
+  text-shadow: 2px 2px 0px #cfd6ea, 4px 4px 0px #cfd6ea, 6px 6px 0px #cfd6ea;
+}
+
+.title .rainbow {
+  text-shadow: -0.5px -0.5px 0px #cfd6ea, 2px 2px 0px #eb452b, 4px 4px 0px #efa032, 6px 6px 0px #46b59b,
+  8px 8px 0px #017e7f, 10px 10px 0px #052939, 12px 12px 0px #cfd6ea,
+  14px 14px 0px #cfd6ea, 16px 16px 0px #cfd6ea, 18px 18px 0px #cfd6ea;
+}
+
+p {
+  text-align: center;
+  font-family: "Helvetica";
+  font-size: 0.8rem;
+}
+
+a {
+  color: #d52e3f;
+  text-decoration: none;
+  font-family: "Niconne", cursive;
+  font-size: 1.2rem;
 }
 
 .book h2 {
@@ -360,14 +401,14 @@ h3 {
 }
 
 .quote--arthur {
-  font-family: 'Reenie Beanie', cursive;
+  font-family: "Reenie Beanie", cursive;
   color: #ed2626;
   font-size: 26px;
   line-height: 28px;
 }
 
 .quote--merlin {
-  font-family: 'Sacramento', cursive;
+  font-family: "Sacramento", cursive;
   color: #ed51d3;
   font-size: 26px;
   line-height: 28px;
