@@ -75,29 +75,30 @@ body {
 
 .button__container {
   margin: 0 auto;
-  width: 500px;
+  width: 185px;
 }
 
-#myBook__container {
-  /* width: 60%;
-  position: relative;
-  display: inline-block; */
+.button {
+  background-color: white;
+  border: none;
+  border-radius: 50px;
+  width: 50px;
+  height: 70px;
+  font-size: 40px;
+  color: #080f40;
+  padding: 5px;
+  margin: 5px 20px;
 }
 
-/* #sidepanel__container {
-  width: 40%;
-  display: inline-block;
-} */
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2pt purple;
+}
 
-/* page layout  */
-.row {
-  display: flex;
-}
-.column-60 {
-  flex: 60%;
-}
-.column-40 {
-  flex: 40%;
+#panel__container {
+  position: absolute;
+  bottom: 50px;
+  left: 650px;
 }
 
 /* 2 col layout used on credits page  */
@@ -123,7 +124,7 @@ body {
 }
 
 #myBook {
-  top: 120px;
+  top: 150px;
   left: 400px;
   transition: left 0.5s;
   -webkit-transform: rotate3d(50, -20, -10, 23deg);
@@ -171,47 +172,47 @@ body {
   background: #ffffff; /* Old browsers */
   background: -moz-linear-gradient(
     90deg,
-    #e5e5e5 1%,
+    #efefef 1%,
     #ffffff 25%,
     #ffffff 75%,
-    #e5e5e5 99%
+    #efefef 99%
   ); /* FF3.6+ */
   background: -webkit-gradient(
     linear,
     center top,
     center bottom,
     color-stop(0%, #ffffff),
-    color-stop(100%, #e5e5e5)
+    color-stop(100%, #efefef)
   ); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(
     90deg,
-    #e5e5e5 1%,
+    #efefef 1%,
     #ffffff 25%,
     #ffffff 75%,
-    #e5e5e5 99%
+    #efefef 99%
   ); /* Chrome10+,Safari5.1+ */
   background: -o-linear-gradient(
     90deg,
-    #e5e5e5 1%,
+    #efefef 1%,
     #ffffff 25%,
     #ffffff 75%,
-    #e5e5e5 99%
+    #efefef 99%
   ); /* Opera 11.10+ */
   background: -ms-linear-gradient(
     90deg,
-    #e5e5e5 1%,
+    #efefef 1%,
     #ffffff 25%,
     #ffffff 75%,
-    #e5e5e5 99%
+    #efefef 99%
   ); /* IE10+ */
   background: linear-gradient(
     90deg,
-    #e5e5e5 1%,
+    #efefef 1%,
     #ffffff 25%,
     #ffffff 75%,
-    #e5e5e5 99%
+    #efefef 99%
   ); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   width: 550px;
   height: 350px;
   position: absolute;
@@ -234,51 +235,50 @@ body {
   background: #ffffff; /* Old browsers */
   background: -moz-linear-gradient(
     90deg,
-    #e5e5e5 1%,
+    #efefef 1%,
     #ffffff 25%,
     #ffffff 75%,
-    #e5e5e5 99%
+    #efefef 99%
   ); /* FF3.6+ */
   background: -webkit-gradient(
     linear,
     center top,
     center bottom,
     color-stop(0%, #ffffff),
-    color-stop(100%, #e5e5e5)
+    color-stop(100%, #efefef)
   ); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(
     90deg,
-    #e5e5e5 1%,
+    #efefef 1%,
     #ffffff 25%,
     #ffffff 75%,
-    #e5e5e5 99%
+    #efefef 99%
   ); /* Chrome10+,Safari5.1+ */
   background: -o-linear-gradient(
     90deg,
-    #e5e5e5 1%,
+    #efefef 1%,
     #ffffff 25%,
     #ffffff 75%,
-    #e5e5e5 99%
+    #efefef 99%
   ); /* Opera 11.10+ */
   background: -ms-linear-gradient(
     90deg,
-    #e5e5e5 1%,
+    #efefef 1%,
     #ffffff 25%,
     #ffffff 75%,
-    #e5e5e5 99%
+    #efefef 99%
   ); /* IE10+ */
   background: linear-gradient(
     90deg,
-    #e5e5e5 1%,
+    #efefef 1%,
     #ffffff 25%,
     #ffffff 75%,
-    #e5e5e5 99%
+    #efefef 99%
   ); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   width: 550px;
   height: 350px;
   position: absolute;
-  /* margin: 25px 0; */
   margin: 25px 25px 25px 0; /* this centers the page vertically within the book covers*/
 
   -webkit-transform: rotateY(180deg);
@@ -369,8 +369,7 @@ h3 {
 }
 
 .book .rainbow {
-  /* height: 90vh; */
-  line-height: 0.1vh;
+  line-height: 0;
   color: #ffffff;
   font-family: "Gochi Hand", cursive;
   text-shadow: 2px 2px 0px #eb452b, 4px 4px 0px #efa032, 6px 6px 0px #46b59b,
@@ -394,19 +393,6 @@ h3 {
     16px 16px 0px #cfd6ea, 18px 18px 0px #cfd6ea;
 }
 
-p {
-  text-align: center;
-  font-family: "Helvetica";
-  font-size: 0.8rem;
-}
-
-a {
-  color: #d52e3f;
-  text-decoration: none;
-  font-family: "Niconne", cursive;
-  font-size: 1.2rem;
-}
-
 .book h2 {
   /* font-family: 'Gochi Hand', cursive; */
   font-family: "Aclonica", sans-serif;
@@ -426,6 +412,11 @@ a {
 .book-pages h2 {
   font-family: "Gochi Hand", cursive;
   font-size: 25px;
+}
+
+/* styling specific to the credits page to get the content to fit nicely  */
+.credits {
+  font-family: "Gochi Hand", cursive;
 }
 
 /* utility classes for justifying text  */
@@ -492,7 +483,13 @@ a {
   text-transform: uppercase;
 }
 
-/* styling specific to the credits page to get the content to fit nicely  */
-.credits {
-  font-family: "Gochi Hand", cursive;
+.icon--github {
+  content: "";
+  display: block;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 20px;
+  left: -600px;
+  background: url(./assets/img/icon-github.png) no-repeat 0px 0px / contain;
 }

@@ -44,7 +44,6 @@ setTransform = function (e, v) {
 
   buttonNext.addEventListener("click", (event) => {
     nextPage();
-    buttonNext.textContent = "turn to next page";
   });
 
   buttonPrevious.addEventListener("click", (event) => {
