@@ -24,12 +24,6 @@ setTransform = function (e, v) {
   }
 })();
 
-// set viewing angle of book
-(function () {
-  var cardPage = document.querySelector("#myBook > div");
-  setTransform(cardPage, "rotateX(23deg) rotateZ(-7deg) rotateY(-5deg)");
-})();
-
 (function () {
   var px,
     py,
