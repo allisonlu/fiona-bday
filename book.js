@@ -69,7 +69,7 @@ setTransform = function (e, v) {
     }
     if (currentPage == 0) {
       console.log("on the cover");
-      myBook.style.right = "500px";
+      myBook.style.left = "400px";
     }
   };
 
@@ -81,7 +81,7 @@ setTransform = function (e, v) {
       );
 
       // book starts centered in screen. when book opens, it shifts to the right
-      myBook.style.right = "100px";
+      myBook.style.left = "700px";
       currentPage++;
     }
   };
