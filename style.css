@@ -1,3 +1,7 @@
+iframe {
+  border: none;
+}
+
 html {
   /* width: 50%; */
   width: 1000px;
@@ -166,29 +170,47 @@ body {
 .book > div > div:first-child {
   background: #ffffff; /* Old browsers */
   background: -moz-linear-gradient(
-    -45deg,
-    #ffffff 0%,
-    #e5e5e5 100%
+    90deg,
+    #e5e5e5 1%,
+    #ffffff 25%,
+    #ffffff 75%,
+    #e5e5e5 99%
   ); /* FF3.6+ */
   background: -webkit-gradient(
     linear,
-    left top,
-    right bottom,
+    center top,
+    center bottom,
     color-stop(0%, #ffffff),
     color-stop(100%, #e5e5e5)
   ); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(
-    -45deg,
-    #ffffff 0%,
-    #e5e5e5 100%
+    90deg,
+    #e5e5e5 1%,
+    #ffffff 25%,
+    #ffffff 75%,
+    #e5e5e5 99%
   ); /* Chrome10+,Safari5.1+ */
   background: -o-linear-gradient(
-    -45deg,
-    #ffffff 0%,
-    #e5e5e5 100%
+    90deg,
+    #e5e5e5 1%,
+    #ffffff 25%,
+    #ffffff 75%,
+    #e5e5e5 99%
   ); /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #ffffff 0%, #e5e5e5 100%); /* IE10+ */
-  background: linear-gradient(135deg, #ffffff 0%, #e5e5e5 100%); /* W3C */
+  background: -ms-linear-gradient(
+    90deg,
+    #e5e5e5 1%,
+    #ffffff 25%,
+    #ffffff 75%,
+    #e5e5e5 99%
+  ); /* IE10+ */
+  background: linear-gradient(
+    90deg,
+    #e5e5e5 1%,
+    #ffffff 25%,
+    #ffffff 75%,
+    #e5e5e5 99%
+  ); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   width: 550px;
   height: 350px;
@@ -211,29 +233,47 @@ body {
   background-color: white;
   background: #ffffff; /* Old browsers */
   background: -moz-linear-gradient(
-    -45deg,
-    #ffffff 0%,
-    #e5e5e5 100%
+    90deg,
+    #e5e5e5 1%,
+    #ffffff 25%,
+    #ffffff 75%,
+    #e5e5e5 99%
   ); /* FF3.6+ */
   background: -webkit-gradient(
     linear,
-    left top,
-    right bottom,
+    center top,
+    center bottom,
     color-stop(0%, #ffffff),
     color-stop(100%, #e5e5e5)
   ); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(
-    -45deg,
-    #ffffff 0%,
-    #e5e5e5 100%
+    90deg,
+    #e5e5e5 1%,
+    #ffffff 25%,
+    #ffffff 75%,
+    #e5e5e5 99%
   ); /* Chrome10+,Safari5.1+ */
   background: -o-linear-gradient(
-    -45deg,
-    #ffffff 0%,
-    #e5e5e5 100%
+    90deg,
+    #e5e5e5 1%,
+    #ffffff 25%,
+    #ffffff 75%,
+    #e5e5e5 99%
   ); /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #ffffff 0%, #e5e5e5 100%); /* IE10+ */
-  background: linear-gradient(135deg, #ffffff 0%, #e5e5e5 100%); /* W3C */
+  background: -ms-linear-gradient(
+    90deg,
+    #e5e5e5 1%,
+    #ffffff 25%,
+    #ffffff 75%,
+    #e5e5e5 99%
+  ); /* IE10+ */
+  background: linear-gradient(
+    90deg,
+    #e5e5e5 1%,
+    #ffffff 25%,
+    #ffffff 75%,
+    #e5e5e5 99%
+  ); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   width: 550px;
   height: 350px;
@@ -258,7 +298,7 @@ body {
 .book > div:last-child > div:last-child {
   background: #ffffff; /* Old browsers */
   background: -moz-linear-gradient(
-    -45deg,
+    135deg,
     #8c9ccc 0%,
     #080f40 100%
   ); /* FF3.6+ */
@@ -270,16 +310,16 @@ body {
     color-stop(100%, #080f40)
   ); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(
-    -45deg,
+    135deg,
     #8c9ccc 0%,
     #080f40 100%
   ); /* Chrome10+,Safari5.1+ */
   background: -o-linear-gradient(
-    -45deg,
+    135deg,
     #8c9ccc 0%,
     #080f40 100%
   ); /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #8c9ccc 0%, #080f40 100%); /* IE10+ */
+  background: -ms-linear-gradient(135deg, #8c9ccc 0%, #080f40 100%); /* IE10+ */
   background: linear-gradient(135deg, #8c9ccc 0%, #080f40 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8C9CCC', endColorstr='#080f40',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   color: #000;
@@ -288,8 +328,9 @@ body {
   margin-top: -1px;
 
   /* ornate border */
-  border: 25px solid #B88846;
-  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E") 25;
+  border: 25px solid #b88846;
+  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E")
+    25;
 }
 
 /* default font sizes and spacings  */
@@ -329,7 +370,7 @@ h3 {
 
 .book .rainbow {
   /* height: 90vh; */
-  line-height: .1vh;
+  line-height: 0.1vh;
   color: #ffffff;
   font-family: "Gochi Hand", cursive;
   text-shadow: 2px 2px 0px #eb452b, 4px 4px 0px #efa032, 6px 6px 0px #46b59b,
@@ -347,9 +388,10 @@ h3 {
 }
 
 .title .rainbow {
-  text-shadow: -0.5px -0.5px 0px #cfd6ea, 2px 2px 0px #eb452b, 4px 4px 0px #efa032, 6px 6px 0px #46b59b,
-  8px 8px 0px #017e7f, 10px 10px 0px #052939, 12px 12px 0px #cfd6ea,
-  14px 14px 0px #cfd6ea, 16px 16px 0px #cfd6ea, 18px 18px 0px #cfd6ea;
+  text-shadow: -0.5px -0.5px 0px #cfd6ea, 2px 2px 0px #eb452b,
+    4px 4px 0px #efa032, 6px 6px 0px #46b59b, 8px 8px 0px #017e7f,
+    10px 10px 0px #052939, 12px 12px 0px #cfd6ea, 14px 14px 0px #cfd6ea,
+    16px 16px 0px #cfd6ea, 18px 18px 0px #cfd6ea;
 }
 
 p {
