@@ -120,8 +120,8 @@ body {
 
 #myBook {
   top: 120px;
-  right: 500px;
-  transition: right 0.5s;
+  left: 400px;
+  transition: left 0.5s;
   -webkit-transform: rotate3d(-1.8, -1, 0.6, 20deg);
   -moz-transform: rotate3d(-1.8, -1, 0.6, 20deg);
   -ms-transform: rotate3d(-1.8, -1, 0.6, 20deg);
@@ -190,8 +190,8 @@ body {
   background: -ms-linear-gradient(-45deg, #ffffff 0%, #e5e5e5 100%); /* IE10+ */
   background: linear-gradient(135deg, #ffffff 0%, #e5e5e5 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  width: 700px;
-  height: 600px;
+  width: 550px;
+  height: 350px;
   position: absolute;
   overflow: hidden;
   -webkit-transform: translate3d(0px, 0px, 0.02px);
@@ -201,7 +201,7 @@ body {
   transform: translate3d(0px, 0px, 0.02px);
   padding: 30px;
   padding-left: 40px;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
   border-left: 2px solid #000;
 }
 
@@ -234,8 +234,8 @@ body {
   background: -ms-linear-gradient(-45deg, #ffffff 0%, #e5e5e5 100%); /* IE10+ */
   background: linear-gradient(135deg, #ffffff 0%, #e5e5e5 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  width: 700px;
-  height: 600px;
+  width: 550px;
+  height: 350px;
   position: absolute;
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -245,7 +245,7 @@ body {
   overflow: hidden;
   padding: 30px;
   padding-right: 40px;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
   border-right: 2px solid #000;
 }
 
@@ -284,15 +284,124 @@ body {
   margin-top: -1px;
 }
 
-h1 {
-  margin-top: 200px;
-  font-family: Cochin, sans-serif;
+/* default font sizes and spacings  */
+h1,
+h2,
+h3 {
+  margin: 0 0 10px;
 }
 
-.book-pages p {
-  text-align: left;
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 25px;
+  font-family: "Mali", cursive;
 }
 
 h3 {
   margin: 14px 0 5px;
+  font-size: 20px;
+}
+
+/* cover and title pages */
+.book p {
+  font-family: "Gochi Hand", cursive;
+}
+
+.book h1 {
+  font-family: "Aclonica", sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 25px;
+}
+
+.book h2 {
+  /* font-family: 'Gochi Hand', cursive; */
+  font-family: "Aclonica", sans-serif;
+  font-size: 20px;
+  text-transform: lowercase;
+}
+
+/* story pages  */
+.book-pages p {
+  font-family: "Mali", cursive;
+  text-align: left;
+  font-size: 15px;
+  margin: 10px 0 0;
+  line-height: 20px;
+}
+
+.book-pages h2 {
+  font-family: "Gochi Hand", cursive;
+  font-size: 25px;
+}
+
+/* utility classes for justifying text  */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.bottom {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.chapter-title {
+  position: absolute;
+  top: 30px;
+  left: 270px;
+}
+
+.quote--arthur {
+  font-family: 'Reenie Beanie', cursive;
+  color: #ed2626;
+  font-size: 26px;
+  line-height: 28px;
+}
+
+.quote--merlin {
+  font-family: 'Sacramento', cursive;
+  color: #ed51d3;
+  font-size: 26px;
+  line-height: 28px;
+}
+
+@font-face {
+  font-family: OldeEnglishRegular;
+  src: url(./assets/fonts/OldeEnglishRegular.ttf);
+  font-size: 26px;
+}
+
+.quote--alissa {
+  color: #8c66b2;
+  font-family: OldeEnglishRegular, cursive;
+  font-size: 26px;
+  line-height: 28px;
+}
+
+.quote--hotdog {
+  font-family: "Gochi Hand", cursive;
+  color: #26ed4e;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.quote--wxtches {
+  font-family: "Gochi Hand", cursive;
+  color: #26dced;
+  font-size: 26px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+/* styling specific to the credits page to get the content to fit nicely  */
+.credits {
+  font-family: "Gochi Hand", cursive;
 }
