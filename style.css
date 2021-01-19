@@ -484,6 +484,7 @@ h3 {
 }
 
 .icon--github {
+  font-size: 0; /* visually hides link text */
   content: "";
   display: block;
   height: 50px;
