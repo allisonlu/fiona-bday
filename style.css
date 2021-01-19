@@ -441,18 +441,20 @@ h3 {
   left: 270px;
 }
 
-.quote--arthur {
+p.quote--arthur, .quote--arthur {
   font-family: "Reenie Beanie", cursive;
   color: #ed2626;
   font-size: 26px;
   line-height: 28px;
+  /* margin-left: 20px; */
 }
 
-.quote--merlin {
+p.quote--merlin, .quote--merlin {
   font-family: "Sacramento", cursive;
   color: #ed51d3;
   font-size: 26px;
   line-height: 28px;
+  /* margin-left: 20px; */
 }
 
 @font-face {
@@ -461,18 +463,20 @@ h3 {
   font-size: 26px;
 }
 
-.quote--alissa {
+p.quote--alissa, .quote--alissa {
   color: #8c66b2;
   font-family: OldeEnglishRegular, cursive;
   font-size: 26px;
   line-height: 28px;
+  /* margin-left: 20px; */
 }
 
-.quote--hotdog {
+p.quote--hotdog, .quote--hotdog {
   font-family: "Gochi Hand", cursive;
   color: #26ed4e;
   font-size: 22px;
   line-height: 28px;
+  /* margin-left: 20px; */
 }
 
 .quote--wxtches {
@@ -481,6 +485,21 @@ h3 {
   font-size: 26px;
   line-height: 28px;
   text-transform: uppercase;
+  /* margin-left: 20px;
+  margin-right: 20px; */
+}
+
+p.quote-block {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+p.quote-block .quote--merlin,
+p.quote-block .quote--arthur,
+p.quote-block .quote--hotdog,
+p.quote-block .quote--alissa,
+p.quote-block .quote--wxtches {
+  margin-left: 0px;
 }
 
 .icon--github {
