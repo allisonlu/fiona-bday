@@ -1,9 +1,9 @@
 <!doctype html>
 <html>
   <head>
-    <script type="text/javascript" src="../libraries/p5.min.js"></script>
-    <script type="text/javascript" src="../libraries/p5.play.js"></script>
-    <script type="text/javascript" src="../libraries/p5.sound.min.js"></script>
+    <script type="text/javascript" src="/libraries/p5.min.js"></script>
+    <script type="text/javascript" src="/libraries/p5.play.js"></script>
+    <script type="text/javascript" src="/libraries/p5.sound.min.js"></script>
     <style>
       html, body {
         overflow: hidden;
@@ -53,10 +53,10 @@
       function preload() {
         // load songs into p5 sound object array
         for (let i=0; i<song_info.length; i++) {
-          song_array.push(loadSound('../audio/' + song_info[i].path));
+          song_array.push(loadSound('/assets/audio/' + song_info[i].path));
         }
 
-        note = loadImage('../img/musical-note.png')
+        note = loadImage('/assets/img/musical-note.png')
       }
 
       function setup() {
