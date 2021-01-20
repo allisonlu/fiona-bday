@@ -441,7 +441,8 @@ h3 {
   left: 270px;
 }
 
-p.quote--arthur, .quote--arthur {
+p.quote--arthur,
+.quote--arthur {
   font-family: "Reenie Beanie", cursive;
   color: #ed2626;
   font-size: 26px;
@@ -449,7 +450,8 @@ p.quote--arthur, .quote--arthur {
   /* margin-left: 20px; */
 }
 
-p.quote--merlin, .quote--merlin {
+p.quote--merlin,
+.quote--merlin {
   font-family: "Sacramento", cursive;
   color: #ed51d3;
   font-size: 26px;
@@ -463,7 +465,8 @@ p.quote--merlin, .quote--merlin {
   font-size: 26px;
 }
 
-p.quote--alissa, .quote--alissa {
+p.quote--alissa,
+.quote--alissa {
   color: #8c66b2;
   font-family: OldeEnglishRegular, cursive;
   font-size: 26px;
@@ -471,7 +474,8 @@ p.quote--alissa, .quote--alissa {
   /* margin-left: 20px; */
 }
 
-p.quote--hotdog, .quote--hotdog {
+p.quote--hotdog,
+.quote--hotdog {
   font-family: "Gochi Hand", cursive;
   color: #26ed4e;
   font-size: 22px;
@@ -513,3 +517,314 @@ p.quote-block .quote--wxtches {
   left: -600px;
   background: url(./assets/img/icon-github.png) no-repeat 0px 0px / contain;
 }
+
+/* radial dial  */
+/* [1] */
+/* [2] */
+/* [3] */
+/* [4] */
+/* [5] */
+/* [6] */
+/* Styles: */
+.icon {
+  font-family: "Gochi Hand", cursive;
+  position: relative;
+  background: white;
+  cursor: pointer;
+  margin: auto;
+  color: deepskyblue;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  line-height: 200px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  transition: 0.24s 0.2s;
+  /* writing-mode: vertical-rl;
+text-orientation: upright; */
+}
+
+.icon:hover {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.menu {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  border: 200px solid transparent;
+  cursor: default;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 1.4s 0.07s;
+  z-index: -5;
+}
+
+.spread {
+  position: absolute;
+  top: -115px;
+  left: -115px;
+  transform-origin: 115px 115px;
+  transition: all 0.5s 0.1s;
+}
+
+.icon:hover .menu {
+  transition: transform 0.4s 0.08s, z-index 0s 0.5s;
+  transform: scale(1);
+  z-index: 5;
+}
+.icon:hover .spread,
+.icon:hover .unit {
+  transition: all 0.6s;
+}
+
+/* 0 */
+.icon:hover .spread:nth-child(1) {
+  transition-delay: 0.02s;
+  transform: rotate(45deg);
+}
+.icon:hover .spread:nth-child(1) .unit {
+  transition-delay: 0.04s;
+  transform: rotate(400deg);
+}
+
+/* 1 */
+.icon:hover .spread:nth-child(2) {
+  transition-delay: 0.04s;
+  transform: rotate(62deg);
+}
+.icon:hover .spread:nth-child(2) .unit {
+  transition-delay: 0.08s;
+  transform: rotate(630deg);
+}
+
+/* 2 */
+.icon:hover .spread:nth-child(3) {
+  transition-delay: 0.06s;
+  transform: rotate(79deg);
+}
+.icon:hover .spread:nth-child(3) .unit {
+  transition-delay: 0.12s;
+  /* transform: rotate(279deg); */
+}
+
+/* 3 */
+.icon:hover .spread:nth-child(4) {
+  transition-delay: 0.08s;
+  transform: rotate(96deg);
+}
+.icon:hover .spread:nth-child(4) .unit {
+  transition-delay: 0.16s;
+  /* transform: rotate(296deg); */
+}
+
+/* 4 */
+.icon:hover .spread:nth-child(5) {
+  transition-delay: 0.1s;
+  transform: rotate(113deg);
+}
+.icon:hover .spread:nth-child(5) .unit {
+  transition-delay: 0.2s;
+  /* transform: rotate(deg); */
+}
+
+/* 5 */
+.icon:hover .spread:nth-child(6) {
+  transition-delay: 0.12s;
+  transform: rotate(130deg);
+}
+.icon:hover .spread:nth-child(6) .unit {
+  transition-delay: 0.24s;
+  /* transform: rotate(435deg); */
+}
+
+/* 6 */
+.icon:hover .spread:nth-child(7) {
+  transition-delay: 0.14s;
+  transform: rotate(147deg);
+}
+.icon:hover .spread:nth-child(7) .unit {
+  transition-delay: 0.28s;
+  /* transform: rotate(395deg); */
+}
+
+/* 7 */
+.icon:hover .spread:nth-child(8) {
+  transition-delay: 0.16s;
+  transform: rotate(164deg);
+}
+.icon:hover .spread:nth-child(8) .unit {
+  transition-delay: 0.32s;
+  transform: rotate(355deg);
+}
+
+/* 8 */
+.icon:hover .spread:nth-child(9) {
+  transition-delay: 0.18s;
+  transform: rotate(181deg);
+}
+.icon:hover .spread:nth-child(9) .unit {
+  transition-delay: 0.36s;
+  transform: rotate(315deg);
+}
+
+/* 9 */
+.icon:hover .spread:nth-child(10) {
+  transition-delay: 0.18s;
+  transform: rotate(198deg);
+}
+.icon:hover .spread:nth-child(10) .unit {
+  transition-delay: 0.36s;
+  transform: rotate(275deg);
+}
+
+/* 10 */
+.icon:hover .spread:nth-child(11) {
+  transition-delay: 0.18s;
+  transform: rotate(215deg);
+}
+.icon:hover .spread:nth-child(11) .unit {
+  transition-delay: 0.36s;
+  transform: rotate(235deg);
+}
+
+/* 11 */
+.icon:hover .spread:nth-child(12) {
+  transition-delay: 0.18s;
+  transform: rotate(232deg);
+}
+.icon:hover .spread:nth-child(12) .unit {
+  transition-delay: 0.36s;
+  transform: rotate(195deg);
+}
+
+/* 12 */
+.icon:hover .spread:nth-child(13) {
+  transition-delay: 0.18s;
+  transform: rotate(249deg);
+}
+.icon:hover .spread:nth-child(13) .unit {
+  transition-delay: 0.36s;
+  transform: rotate(155deg);
+}
+
+/* 13 */
+.icon:hover .spread:nth-child(14) {
+  transition-delay: 0.18s;
+  transform: rotate(266deg);
+}
+.icon:hover .spread:nth-child(14) .unit {
+  transition-delay: 0.36s;
+  transform: rotate(115deg);
+}
+
+/* 14 */
+.icon:hover .spread:nth-child(15) {
+  transition-delay: 0.18s;
+  transform: rotate(283deg);
+}
+.icon:hover .spread:nth-child(15) .unit {
+  transition-delay: 0.36s;
+  transform: rotate(75deg);
+}
+
+/* 15 */
+.icon:hover .spread:nth-child(16) {
+  transition-delay: 0.18s;
+  transform: rotate(300deg);
+}
+.icon:hover .spread:nth-child(16) .unit {
+  transition-delay: 0.36s;
+  transform: rotate(35deg);
+}
+
+/* 16 */
+.icon:hover .spread:nth-child(17) {
+  transition-delay: 0.18s;
+  transform: rotate(317deg);
+}
+.icon:hover .spread:nth-child(17) .unit {
+  transition-delay: 0.36s;
+  transform: rotate(-5deg);
+}
+
+/* 17 */
+.icon:hover .spread:nth-child(18) {
+  transition-delay: 0.18s;
+  transform: rotate(334deg);
+}
+.icon:hover .spread:nth-child(18) .unit {
+  transition-delay: 0.36s;
+  transform: rotate(-45deg);
+}
+
+/* 18 */
+.icon:hover .spread:nth-child(19) {
+  transition-delay: 0.18s;
+  transform: rotate(351deg);
+}
+.icon:hover .spread:nth-child(19) .unit {
+  transition-delay: 0.36s;
+  transform: rotate(-85deg);
+}
+
+/* 19 */
+.icon:hover .spread:nth-child(20) {
+  transition-delay: 0.18s;
+  transform: rotate(368deg);
+}
+.icon:hover .spread:nth-child(20) .unit {
+  transition-delay: 0.36s;
+  transform: rotate(-125deg);
+}
+
+/* 20 */
+.icon:hover .spread:nth-child(21) {
+  transition-delay: 0.18s;
+  transform: rotate(385deg);
+}
+.icon:hover .spread:nth-child(21) .unit {
+  transition-delay: 0.36s;
+  transform: rotate(-165deg);
+}
+
+/* END .icon:hover */
+.unit {
+  position: absolute;
+  background: white;
+  text-decoration: none;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  color: dodgerblue;
+  border-radius: 50%;
+  transition: 0.6s;
+}
+
+/* Just CodePen layout stuff: */
+body,
+a,
+ul,
+li {
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* html, body { */
+/* height: 100%;
+  min-height: 300px; */
+/* } */
+
+/* body {
+  font-family: sans-serif;
+  background: radial-gradient(#00bfff, #1e90ff);
+  transform: translate3d(0, 0, 0);
+} */
+
+/* .icon {
+  top: 50%;
+  margin-top: -75px;
+} */

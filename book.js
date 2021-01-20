@@ -59,9 +59,9 @@ setTransform = function (e, v) {
         pages[currentPage],
         "translate3d(0px,0px," + -currentPage + "px) rotateY(0deg)"
       );
+      setPageSelection();
     }
     if (currentPage == 0) {
-      console.log("on the cover");
       myBook.style.left = "400px";
     }
   };
@@ -76,8 +76,53 @@ setTransform = function (e, v) {
       // book starts centered in screen. when book opens, it shifts to the right
       myBook.style.left = "700px";
       currentPage++;
+      setPageSelection();
     }
   };
+
+  // set rotary page selector
+  var setPage = function () {
+    var selectedPage = parseInt(this.innerHTML);
+
+    // if paging forwards
+    if (currentPage < selectedPage) {
+      var numberOfPagesToTurn = selectedPage - currentPage;
+
+      for (var i = 0; i < numberOfPagesToTurn; i++) {
+        nextPage();
+      }
+
+      // if paging backwards
+    } else {
+      var numberOfPagesToTurn = currentPage - selectedPage;
+
+      for (var i = 0; i < numberOfPagesToTurn; i++) {
+        previousPage();
+      }
+    }
+    setPageSelection();
+  };
+
+  // get all page number indicator links
+  var elements = document.getElementsByClassName("unit");
+
+  var setPageSelection = function () {
+    for (var i = 0; i < elements.length; i++) {
+      elements[i].style.backgroundColor = "white";
+      elements[i].style.color = "dodgerblue";
+    }
+
+    pageIndicator = elements[currentPage];
+    pageIndicator.style.backgroundColor = "purple";
+    pageIndicator.style.color = "white";
+  };
+  
+  // run once to set page 0 as selected
+  setPageSelection();
+
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].addEventListener("click", setPage, false);
+  }
 
   return;
 
@@ -145,3 +190,12 @@ window.onmousemove = function(ev) {
 };
 */
 })();
+
+// let pageArray = document.getElementsByClassName("unit");
+// console.log(pageArray);
+
+// for (let index = 0; index < pageArray.length; index++) {
+//   const element = pageArray[index];
+//   console.log(element.href);
+
+// }
