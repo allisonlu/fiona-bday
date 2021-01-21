@@ -7,6 +7,6 @@ all_sketches.forEach(sketch => {
   let iframe = document.createElement('iframe');
   iframe.src = sketch_path;
   iframe.height = '375';
-  iframe.width = '400';
+  iframe.width = '500';
   sketch.append(iframe);
 });
