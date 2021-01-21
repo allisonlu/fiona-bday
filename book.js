@@ -25,16 +25,16 @@ setTransform = function (e, v) {
 })();
 
 (function () {
-  var px,
-    py,
-    sx,
-    sy,
-    down,
-    rot = 0,
-    rotX = 0,
-    rotY = 0,
-    cancel;
-  var cardPage = document.querySelector("#myBook > div");
+  // var px,
+  //   py,
+  //   sx,
+  //   sy,
+  //   down,
+  //   rot = 0,
+  //   rotX = 0,
+  //   rotY = 0,
+  //   cancel;
+  // var cardPage = document.querySelector("#myBook > div");
   var pages = document.querySelectorAll("#myBook > div > div");
   var currentPage = 0;
 
@@ -51,6 +51,7 @@ setTransform = function (e, v) {
   });
 
   let myBook = document.getElementById("myBook");
+  let pageNav = document.getElementById("page-nav");
 
   var previousPage = function () {
     if (currentPage > 0) {
@@ -62,7 +63,12 @@ setTransform = function (e, v) {
       setPageSelection();
     }
     if (currentPage == 0) {
-      myBook.style.left = "400px";
+      myBook.style.left = "27vw"; // back to starting position
+      myBook.style.top = "3vh"; // back to starting position
+      myBook.style.transform = "rotate3d(0, 0, 0, 0deg)"; // back to starting angle
+
+      pageNav.style.left = "31vw"; // back to starting position
+      pageNav.style.transform = "rotate3d(0, 0, 0, 0deg)"; // back to starting angle
     }
   };
 
@@ -74,7 +80,13 @@ setTransform = function (e, v) {
       );
 
       // book starts centered in screen. when book opens, it shifts to the right
-      myBook.style.left = "700px";
+      myBook.style.left = "45vw"; // to reading position
+      myBook.style.top = "12vh"; // to reading position
+      myBook.style.transform = "rotate3d(150, -20, -100, 23deg)"; // to reading angle
+
+      pageNav.style.left = "750px"; // to reading position
+      pageNav.style.transform = "rotate(-13deg)"; // to reading angle
+
       currentPage++;
       setPageSelection();
     }
@@ -116,7 +128,7 @@ setTransform = function (e, v) {
     pageIndicator.style.backgroundColor = "purple";
     pageIndicator.style.color = "white";
   };
-  
+
   // run once to set page 0 as selected
   setPageSelection();
 
@@ -190,12 +202,3 @@ window.onmousemove = function(ev) {
 };
 */
 })();
-
-// let pageArray = document.getElementsByClassName("unit");
-// console.log(pageArray);
-
-// for (let index = 0; index < pageArray.length; index++) {
-//   const element = pageArray[index];
-//   console.log(element.href);
-
-// }
