@@ -64,7 +64,7 @@ setTransform = function (e, v) {
     }
     if (currentPage == 0) {
       myBook.style.left = "27vw"; // back to starting position
-      myBook.style.top = "3vh"; // back to starting position
+      myBook.style.top = "25px"; // back to starting position
       myBook.style.transform = "rotate3d(0, 0, 0, 0deg)"; // back to starting angle
 
       pageNav.style.left = "31vw"; // back to starting position
@@ -84,7 +84,7 @@ setTransform = function (e, v) {
       myBook.style.top = "12vh"; // to reading position
       myBook.style.transform = "rotate3d(150, -20, -100, 23deg)"; // to reading angle
 
-      pageNav.style.left = "750px"; // to reading position
+      pageNav.style.left = "57vw"; // to reading position
       pageNav.style.transform = "rotate(-13deg)"; // to reading angle
 
       currentPage++;
