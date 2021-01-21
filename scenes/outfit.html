@@ -20,10 +20,14 @@
 
         Arthur: greaser
         Merlin: poodle skirt
+
+        ENHANCEMENTS:
+          - make sure outfits don't land on dog sprints on load
+          - create more abstract function => Dog class?
       ****/
 
       const canvas_height = 375;
-      const canvas_width = 500;
+      const canvas_width = 400;
 
       let arthur_img, merlin_img, arthur, merlin;
       let arthur_success, merlin_success;
@@ -45,6 +49,8 @@
         // resize pngs
         arthur_img.resize(0, 120);
         merlin_img.resize(0, 150);
+        arthur_success.resize(0, 120);
+        merlin_success.resize(0, 120);
 
         // create sprite with image of dogs
         arthur = createSprite(100, height/2); 
@@ -95,12 +101,11 @@
         greaser.position.x = arthur.position.x;
         greaser.position.y = arthur.position.y;
 
-        // switch sprite to image
-        image(arthur_success, arthur.position.x-60, arthur.position.y-70, 120, 160);
+        // switch sprite to new image
+        arthur.addImage(arthur_success);
 
-        // remove sprites
+        // remove outfit sprite
         greaser.remove();
-        arthur.remove();
       }
       
       function meemee(skirt, merlin) {
@@ -108,12 +113,11 @@
         skirt.position.x = merlin.position.x;
         skirt.position.y = merlin.position.y;
 
-        // switch sprite to image
-        image(merlin_success, merlin.position.x-60, merlin.position.y-80, 130, 160);
+        // switch sprite to new image
+        merlin.addImage(merlin_success);
 
-        // remove sprites
+        // remove outfit sprite
         skirt.remove();
-        merlin.remove();
       }
 
     </script>
