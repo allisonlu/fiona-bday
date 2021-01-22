@@ -75,6 +75,12 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media only screen and (max-width: 600px) {
+  .page-nav {
+    left: 0vw;
+  }
+}
+
 .page-nav > * {
   display: inline-block;
 }
@@ -635,7 +641,7 @@ p.quote-block .quote--wxtches {
 
 /* 4 */
 .icon:hover .spread:nth-child(5) {
-  transition-delay: 0.10s;
+  transition-delay: 0.1s;
   transform: rotate(113deg);
 }
 .icon:hover .spread:nth-child(5) .unit {
@@ -685,11 +691,11 @@ p.quote-block .quote--wxtches {
 
 /* 9 */
 .icon:hover .spread:nth-child(10) {
-  transition-delay: 0.20s;
+  transition-delay: 0.2s;
   transform: rotate(198deg);
 }
 .icon:hover .spread:nth-child(10) .unit {
-  transition-delay: 0.40s;
+  transition-delay: 0.4s;
   transform: rotate(875deg);
 }
 
@@ -735,13 +741,12 @@ p.quote-block .quote--wxtches {
 
 /* 14 */
 .icon:hover .spread:nth-child(15) {
-  transition-delay: 0.30s;
+  transition-delay: 0.3s;
   transform: rotate(283deg);
 }
 .icon:hover .spread:nth-child(15) .unit {
-  transition-delay: 0.60s;
+  transition-delay: 0.6s;
   transform: rotate(805deg);
-
 }
 
 /* 15 */
@@ -786,11 +791,11 @@ p.quote-block .quote--wxtches {
 
 /* 19 */
 .icon:hover .spread:nth-child(20) {
-  transition-delay: 0.40s;
+  transition-delay: 0.4s;
   transform: rotate(368deg);
 }
 .icon:hover .spread:nth-child(20) .unit {
-  transition-delay: 0.80s;
+  transition-delay: 0.8s;
   transform: rotate(705deg);
 }
 
