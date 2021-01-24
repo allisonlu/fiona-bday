@@ -53,7 +53,7 @@ body {
     #f1d8c1 0%,
     #f9b9c3 100%
   ); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1d8c1', endColorstr='#F9B9C3',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  
   -webkit-perspective: 2300px;
   -moz-perspective: 2300px;
   -ms-perspective: 2300px;
@@ -183,50 +183,7 @@ body {
 
 /* Front of a page */
 .book > div > div:first-child {
-  background: #ffffff; /* Old browsers */
-  background: -moz-linear-gradient(
-    90deg,
-    #efefef 1%,
-    #ffffff 25%,
-    #ffffff 75%,
-    #efefef 99%
-  ); /* FF3.6+ */
-  background: -webkit-gradient(
-    linear,
-    center top,
-    center bottom,
-    color-stop(0%, #ffffff),
-    color-stop(100%, #efefef)
-  ); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(
-    90deg,
-    #efefef 1%,
-    #ffffff 25%,
-    #ffffff 75%,
-    #efefef 99%
-  ); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(
-    90deg,
-    #efefef 1%,
-    #ffffff 25%,
-    #ffffff 75%,
-    #efefef 99%
-  ); /* Opera 11.10+ */
-  background: -ms-linear-gradient(
-    90deg,
-    #efefef 1%,
-    #ffffff 25%,
-    #ffffff 75%,
-    #efefef 99%
-  ); /* IE10+ */
-  background: linear-gradient(
-    90deg,
-    #efefef 1%,
-    #ffffff 25%,
-    #ffffff 75%,
-    #efefef 99%
-  ); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: #ffffff;
   width: 550px;
   height: 350px;
   position: absolute;
@@ -240,61 +197,16 @@ body {
   padding: 30px;
   padding-left: 40px;
   padding-bottom: 40px;
-  border-left: 2px solid #000;
+  border-left: 2px solid #000000;
 }
 
 /* Back of a page */
 .book > div > div:last-child {
-  background-color: white;
-  background: #ffffff; /* Old browsers */
-  background: -moz-linear-gradient(
-    90deg,
-    #efefef 1%,
-    #ffffff 25%,
-    #ffffff 75%,
-    #efefef 99%
-  ); /* FF3.6+ */
-  background: -webkit-gradient(
-    linear,
-    center top,
-    center bottom,
-    color-stop(0%, #ffffff),
-    color-stop(100%, #efefef)
-  ); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(
-    90deg,
-    #efefef 1%,
-    #ffffff 25%,
-    #ffffff 75%,
-    #efefef 99%
-  ); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(
-    90deg,
-    #efefef 1%,
-    #ffffff 25%,
-    #ffffff 75%,
-    #efefef 99%
-  ); /* Opera 11.10+ */
-  background: -ms-linear-gradient(
-    90deg,
-    #efefef 1%,
-    #ffffff 25%,
-    #ffffff 75%,
-    #efefef 99%
-  ); /* IE10+ */
-  background: linear-gradient(
-    90deg,
-    #efefef 1%,
-    #ffffff 25%,
-    #ffffff 75%,
-    #efefef 99%
-  ); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: #ffffff;
   width: 550px;
   height: 350px;
   position: absolute;
   margin: 25px 25px 25px 0; /* this centers the page vertically within the book covers*/
-
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
@@ -304,7 +216,7 @@ body {
   padding: 30px;
   padding-right: 40px;
   padding-bottom: 40px;
-  border-right: 2px solid #000;
+  border-right: 2px solid #000000;
 }
 
 /* covers */
@@ -336,8 +248,8 @@ body {
   background: -ms-linear-gradient(135deg, #8c9ccc 0%, #080f40 100%); /* IE10+ */
   background: linear-gradient(135deg, #8c9ccc 0%, #080f40 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8C9CCC', endColorstr='#080f40',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  color: #000;
-  border: 2px solid #000;
+  color: #000000;
+  border: 2px solid #000000;
   margin-left: -1px;
   margin-top: -1px;
 
@@ -412,7 +324,7 @@ h3 {
 }
 
 .title .rainbow {
-  text-shadow: -0.5px -0.5px 0px #cfd6ea, 2px 2px 0px #eb452b,
+  text-shadow: -0.5px -0.5px 9px #cfd6ea, 2px 2px 0px #eb452b,
     4px 4px 0px #efa032, 6px 6px 0px #46b59b, 8px 8px 0px #017e7f,
     10px 10px 0px #052939, 12px 12px 0px #cfd6ea, 14px 14px 0px #cfd6ea,
     16px 16px 0px #cfd6ea, 18px 18px 0px #cfd6ea;
