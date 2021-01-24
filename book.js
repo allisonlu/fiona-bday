@@ -63,11 +63,11 @@ setTransform = function (e, v) {
       setPageSelection();
     }
     if (currentPage == 0) {
-      myBook.style.left = "27vw"; // back to starting position
+      myBook.style.marginLeft = "-675px"; // back to starting position
       myBook.style.top = "25px"; // back to starting position
       myBook.style.transform = "rotate3d(0, 0, 0, 0deg)"; // back to starting angle
 
-      pageNav.style.left = "31vw"; // back to starting position
+      pageNav.style.marginLeft = "50px"; // back to starting position
       pageNav.style.transform = "rotate3d(0, 0, 0, 0deg)"; // back to starting angle
     }
   };
@@ -80,11 +80,12 @@ setTransform = function (e, v) {
       );
 
       // book starts centered in screen. when book opens, it shifts to the right
-      myBook.style.left = "45vw"; // to reading position
+      myBook.style.marginLeft = "-100px"; // to reading position
       myBook.style.top = "12vh"; // to reading position
       myBook.style.transform = "rotate3d(150, -20, -100, 23deg)"; // to reading angle
 
-      pageNav.style.left = "57vw"; // to reading position
+      pageNav.style.marginLeft = "900px"; // to reading position
+      pageNav.style.top = "540px"; // to reading position
       pageNav.style.transform = "rotate(-13deg)"; // to reading angle
 
       currentPage++;
