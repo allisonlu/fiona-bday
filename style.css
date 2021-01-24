@@ -53,7 +53,7 @@ body {
     #f1d8c1 0%,
     #f9b9c3 100%
   ); /* W3C */
-  
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1d8c1', endColorstr='#F9B9C3',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   -webkit-perspective: 2300px;
   -moz-perspective: 2300px;
   -ms-perspective: 2300px;
