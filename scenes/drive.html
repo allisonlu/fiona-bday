@@ -17,41 +17,40 @@
     <script type="text/javascript">
     
       /****
-        SCENE 1: driving through gayborhood
+        SCENE 3R: driving through gayborhood
       ****/
 
-      const canvas_height = 375;
-      const canvas_width = 400;
+      const canvas_width = 500;
+      const canvas_height = 275;
 
-      let car, car_img, sweetwater;
+      let car, car_img, gayborhood;
 
       function preload() {
-        car_img = loadImage('../assets/img/car.png');
-        sweetwater = loadImage('../assets/img/sweetwater-placeholder.jpg');
+        car_img = loadImage('../assets/img/3R_car_right.png');
+        gayborhood = loadImage('../assets/img/3R_gayborhood.jpg');
       }
 
       function setup() {
         createCanvas(canvas_width, canvas_height);
 
         // edit background imgs
-        sweetwater.resize(0, canvas_width);
-        // sweetwater.filter(ERODE);
+        gayborhood.resize(0, canvas_width);
 
         // resize car png
-        car_img.resize(0, 50);
+        // car_img.resize(0, 50);
         // create sprite with image of car
-        car = createSprite(50, height/2); // set initial position
+        car = createSprite(50, 200); // set initial position
         car.addImage(car_img);
         car.friction = 0.04;
       }
 
       function draw() {
-        background(sweetwater);
-        textSize(32);
+        background(gayborhood);
+        // textSize(32);
         // textAlign(LEFT, TOP);
-        fill(255);
-        text("click to move car",
-          width/3, height*0.1);
+        // fill(255);
+        // text("click to move car",
+        //   width/3, height*0.1);
         
         drawSprites();
 
@@ -60,7 +59,7 @@
       function mousePressed() {
         if (car.position.x < width) {
           // move car to mouseX position
-          car.attractionPoint(5, mouseX, height/2);
+          car.attractionPoint(5, mouseX, 200);
         }
         else {
           car.position.x = 0;

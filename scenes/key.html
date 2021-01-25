@@ -17,37 +17,36 @@
     <script type="text/javascript">
     
       /****
-        SCENE 1: drag key to car
+        SCENE 3L: drag key to car
       ****/
 
-      const canvas_height = 400;
       const canvas_width = 500;
+      const canvas_height = 225;
 
-      let car, car_img, key;
+      let car, car_img, key, key_img;
 
       function preload() {
-        car_img = loadImage('../assets/img/car.png');
+        car_img = loadImage('../assets/img/3R_car_right.png');
+        key_img = loadImage('../assets/img/3L_key.png');
+        bg_img = loadImage('../assets/img/3L_apartment_exterior.jpg');
       }
 
       function setup() {
         createCanvas(canvas_width, canvas_height);
 
         // resize car png
-        car_img.resize(0, 90);
+        car_img.resize(0, 110);
         // create sprite with image of car
-        car = createSprite(50, height/2); // set initial position
+        car = createSprite(50, 175); // set initial position
         car.addImage(car_img);
 
-        key = createSprite(150, 150, 10, 10);
-        key.shapeColor = color(255);
+        key_img.resize(0, 60);
+        key = createSprite(800, 50); // TODO: set initial position
+        key.addImage(key_img);
       }
 
       function draw() {
-        background(50);
-        textSize(12);
-        fill(255);
-        text("key -> car",
-          width/3, height*0.1);
+        background(bg_img);
 
         key.velocity.x = (mouseX - key.position.x) * 0.2;
         key.velocity.y = (mouseY - key.position.y) * 0.2;
@@ -55,7 +54,6 @@
         key.overlap(car, startCar);
 
         drawSprites();
-
       }
 
       function startCar(key, car) {
