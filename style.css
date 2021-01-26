@@ -433,16 +433,34 @@ p.quote-block .quote--wxtches {
   margin-left: 0px;
 }
 
+.side-icons {
+  /* outline: 3px solid red; */
+  position: absolute;
+  bottom: -100vh;
+  left: 8vw;
+}
+
 .icon--github {
   font-size: 0; /* visually hides link text */
   content: "";
   display: block;
   height: 50px;
   width: 50px;
-  position: absolute;
+  /* position: absolute;
   bottom: 0px;
-  left: -200px;
+  left: -200px; */
   background: url(./assets/img/icon-github.png) no-repeat 0px 0px / contain;
+  display: inline-block;
+  margin: 0 25px 8px 0;
+  border-right: 3px solid black;
+  padding: 0 25px 0 0;
+}
+
+#sound-toggle {
+  font-size: 50px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: bottom;
 }
 
 /* radial dial  */

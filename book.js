@@ -160,5 +160,18 @@ setTransform = function (e, v) {
     audio.play();
   }
 
+  var soundToggle = document.getElementById('sound-toggle');
+
+  soundToggle.addEventListener("click", (event) => {
+    if (audio.muted) {
+      audio.muted = false;
+      soundToggle.innerHTML = '&#128266;';
+    } else {
+      audio.muted = true;
+      soundToggle.innerHTML = '&#128263;';
+    }
+  });
+
+
   return;
 })();
