@@ -25,15 +25,6 @@ setTransform = function (e, v) {
 })();
 
 (function () {
-  // var px,
-  //   py,
-  //   sx,
-  //   sy,
-  //   down,
-  //   rot = 0,
-  //   rotX = 0,
-  //   rotY = 0,
-  //   cancel;
   // var cardPage = document.querySelector("#myBook > div");
   var pages = document.querySelectorAll("#myBook > div > div");
   var currentPage = 0;
@@ -61,6 +52,7 @@ setTransform = function (e, v) {
         "translate3d(0px,0px," + -currentPage + "px) rotateY(0deg)"
       );
       setPageSelection();
+      playNarration();
     }
     if (currentPage == 0) {
       myBook.style.marginLeft = "-675px"; // back to starting position
@@ -90,6 +82,7 @@ setTransform = function (e, v) {
 
       currentPage++;
       setPageSelection();
+      playNarration();
     }
   };
 
@@ -137,69 +130,35 @@ setTransform = function (e, v) {
     elements[i].addEventListener("click", setPage, false);
   }
 
-  return;
+  // narration audio
+  var audio = new Audio();
+  var narrationPlaylist = new Array(
+    "/assets/audio/narration/narration-01.m4a",
+    "/assets/audio/narration/narration-02.m4a",
+    "/assets/audio/narration/narration-03.m4a",
+    "/assets/audio/narration/narration-04.m4a",
+    "/assets/audio/narration/narration-05.m4a",
+    "/assets/audio/narration/narration-06.m4a",
+    "/assets/audio/narration/narration-07.m4a",
+    "/assets/audio/narration/narration-08.m4a",
+    "/assets/audio/narration/narration-09.m4a",
+    "/assets/audio/narration/narration-10.m4a",
+    "/assets/audio/narration/narration-11.m4a",
+    "/assets/audio/narration/narration-12.m4a",
+    "/assets/audio/narration/narration-13.m4a",
+    "/assets/audio/narration/narration-14.m4a",
+    "/assets/audio/narration/narration-15.m4a",
+    "/assets/audio/narration/narration-16.m4a",
+    "/assets/audio/narration/narration-17.m4a",
+    "/assets/audio/narration/narration-18.m4a",
+    "/assets/audio/narration/narration-19.m4a",
+    "/assets/audio/narration/narration-20.m4a"
+  );
 
-  // book click and drag functionality
-  // window.onmousedown = function (ev) {
-  //   down = true;
-  //   cancel = false;
-  //   sx = px = ev.clientX;
-  //   sy = py = ev.clientY;
-  //   ev.preventDefault();
-  // };
-
-  // window.onmouseup = function (ev) {
-  //   down = false;
-  // };
-
-  // window.onmousemove = function(ev) {
-  //   if (down) {
-  //     var x = ev.clientX;
-  //     var y = ev.clientY;
-  //     var dx = x-px;
-  //     var dy = y-py;
-  //     px = x;
-  //     py = y;
-  //     cancel = cancel || ((x-sx)*(x-sx)+(y-sy)*(y-sy) > 25);
-  //     rotX -= dy * 1;
-  //     rotY -= dx * 1;
-  //     setTransform(cardPage, 'rotateX('+rotX+'deg) rotateY('+rotY+'deg)');
-  //     ev.preventDefault();
-  //   }
-  // };
-
-  // window.onclick = function (ev) {
-  //   if (cancel) return;
-  //   if (ev.clientX < 600) {
-  //     previousPage();
-  //   } else {
-  //     nextPage();
-  //   }
-  //   ev.preventDefault();
-  // };
-
-  /* deprecated draggable page-turner
-
-window.onmousemove = function(ev) {
-  if (down) {
-    var x = ev.clientX;
-    var y = ev.clientY;
-    var dx = x-px;
-    var dy = y-py;
-    px = x;
-    py = y;
-    rot = Math.min(0, Math.max(-150, rot+dx*2));
-    var p = ((rot / -150)) * 2 * currentPage + -currentPage;
-    setTransform(pages[currentPage], 'translate3d(0px,0px,'+p+'px) rotateY('+ rot + 'deg)');
-    if (rot == -150 && currentPage < pages.length-1) {
-      currentPage++;
-      rot = 0;
-    } else if (rot == 0 && currentPage > 0) {
-      currentPage--;
-      rot = -150;
-    }
-    ev.preventDefault();
+  function playNarration(e) {
+    audio.src = narrationPlaylist[currentPage - 1];
+    audio.play();
   }
-};
-*/
+
+  return;
 })();
