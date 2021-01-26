@@ -353,7 +353,6 @@ h3 {
 .center {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   height: 100%;
   flex-direction: column;
 }
@@ -411,14 +410,6 @@ p.quote--hotdog,
   line-height: 28px;
 }
 
-/* .quote--wxtches {
-  font-family: "Gochi Hand", cursive;
-  color: #26dced;
-  font-size: 26px;
-  line-height: 28px;
-  text-transform: uppercase;
-} */
-
 /* special indented formatting for quote blocks. this class is element-agnostic */
 p.quote-block {
   margin-left: 30px;
@@ -434,10 +425,9 @@ p.quote-block .quote--wxtches {
 }
 
 .side-icons {
-  /* outline: 3px solid red; */
   position: absolute;
-  bottom: -100vh;
-  left: 8vw;
+  bottom: -108vh;
+  left: 5vw;
 }
 
 .icon--github {
@@ -446,9 +436,6 @@ p.quote-block .quote--wxtches {
   display: block;
   height: 50px;
   width: 50px;
-  /* position: absolute;
-  bottom: 0px;
-  left: -200px; */
   background: url(./assets/img/icon-github.png) no-repeat 0px 0px / contain;
   display: inline-block;
   margin: 0 25px 8px 0;
@@ -478,7 +465,6 @@ p.quote-block .quote--wxtches {
   text-align: center;
   font-size: 1.5em;
   font-weight: bold;
-  /* transition: 0.1s 0.1s; */
 }
 
 .icon:hover {
@@ -737,7 +723,6 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.84s;
   transform: rotate(685deg);
 }
-
 /* END .icon:hover */
 
 body,
