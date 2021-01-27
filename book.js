@@ -133,26 +133,26 @@ setTransform = function (e, v) {
   // narration audio
   var audio = new Audio();
   var narrationPlaylist = new Array(
-    "/assets/audio/narration/narration-01.m4a",
-    "/assets/audio/narration/narration-02.m4a",
-    "/assets/audio/narration/narration-03.m4a",
-    "/assets/audio/narration/narration-04.m4a",
-    "/assets/audio/narration/narration-05.m4a",
-    "/assets/audio/narration/narration-06.m4a",
-    "/assets/audio/narration/narration-07.m4a",
-    "/assets/audio/narration/narration-08.m4a",
-    "/assets/audio/narration/narration-09.m4a",
-    "/assets/audio/narration/narration-10.m4a",
-    "/assets/audio/narration/narration-11.m4a",
-    "/assets/audio/narration/narration-12.m4a",
-    "/assets/audio/narration/narration-13.m4a",
-    "/assets/audio/narration/narration-14.m4a",
-    "/assets/audio/narration/narration-15.m4a",
-    "/assets/audio/narration/narration-16.m4a",
-    "/assets/audio/narration/narration-17.m4a",
-    "/assets/audio/narration/narration-18.m4a",
-    "/assets/audio/narration/narration-19.m4a",
-    "/assets/audio/narration/narration-20.m4a"
+    "../assets/audio/narration/narration-01.m4a",
+    "../assets/audio/narration/narration-02.m4a",
+    "../assets/audio/narration/narration-03.m4a",
+    "../assets/audio/narration/narration-04.m4a",
+    "../assets/audio/narration/narration-05.m4a",
+    "../assets/audio/narration/narration-06.m4a",
+    "../assets/audio/narration/narration-07.m4a",
+    "../assets/audio/narration/narration-08.m4a",
+    "../assets/audio/narration/narration-09.m4a",
+    "../assets/audio/narration/narration-10.m4a",
+    "../assets/audio/narration/narration-11.m4a",
+    "../assets/audio/narration/narration-12.m4a",
+    "../assets/audio/narration/narration-13.m4a",
+    "../assets/audio/narration/narration-14.m4a",
+    "../assets/audio/narration/narration-15.m4a",
+    "../assets/audio/narration/narration-16.m4a",
+    "../assets/audio/narration/narration-17.m4a",
+    "../assets/audio/narration/narration-18.m4a",
+    "../assets/audio/narration/narration-19.m4a",
+    "../assets/audio/narration/narration-20.m4a"
   );
 
   function playNarration(e) {
