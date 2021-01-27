@@ -73,7 +73,7 @@ setTransform = function (e, v) {
 
       // book starts centered in screen. when book opens, it shifts to the right
       myBook.style.marginLeft = "-100px"; // to reading position
-      myBook.style.top = "12vh"; // to reading position
+      myBook.style.top = "85px"; // to reading position
       myBook.style.transform = "rotate3d(150, -20, -100, 23deg)"; // to reading angle
 
       pageNav.style.marginLeft = "900px"; // to reading position
@@ -160,17 +160,29 @@ setTransform = function (e, v) {
     audio.play();
   }
 
-  var soundToggle = document.getElementById('sound-toggle');
+  var soundToggle = document.getElementById("sound-toggle");
 
   soundToggle.addEventListener("click", (event) => {
     if (audio.muted) {
       audio.muted = false;
-      soundToggle.innerHTML = '&#128266;';
+      soundToggle.innerHTML = "&#128266;";
     } else {
       audio.muted = true;
-      soundToggle.innerHTML = '&#128263;';
+      soundToggle.innerHTML = "&#128263;";
     }
   });
+
+  // arrow navigation for page turn
+  document.onkeydown = function (e) {
+    switch (e.keyCode) {
+      case 37:
+        previousPage();
+        break;
+      case 39:
+        nextPage();
+        break;
+    }
+  };
 
   return;
 })();
