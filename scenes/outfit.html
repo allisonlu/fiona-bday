@@ -35,22 +35,28 @@
 
       function preload() {
         // nakie
-        arthur_img = loadImage('../assets/img/dog-01.png');
-        merlin_img = loadImage('../assets/img/dog-02.png');
+        arthur_img = loadImage('../assets/img/13R_Arthur_naked.png');
+        merlin_img = loadImage('../assets/img/13R_Merlin_naked.png');
 
         // clothed
-        arthur_success = loadImage('../assets/img/dog-01-successs.jpg');
-        merlin_success = loadImage('../assets/img/dog-02-success.jpg');
+        arthur_success = loadImage('../assets/img/13R_Arthur_jacket.png');
+        merlin_success = loadImage('../assets/img/13R_Merlin_skirt.png');
+
+        // clothing
+        skirt_img = loadImage('../assets/img/13R_skirt.png');
+        jacket_img = loadImage('../assets/img/13R_jacket.png');
+
+        bg_img = loadImage('../assets/img/13R_dressing_room.jpg');
       }
 
       function setup() {
         createCanvas(canvas_width, canvas_height);
 
         // resize pngs
-        arthur_img.resize(0, 120);
-        merlin_img.resize(0, 150);
-        arthur_success.resize(0, 120);
-        merlin_success.resize(0, 120);
+        arthur_img.resize(0, 200);
+        merlin_img.resize(0, 160);
+        arthur_success.resize(0, 200);
+        merlin_success.resize(0, 160);
 
         // create sprite with image of dogs
         arthur = createSprite(100, height/2); 
@@ -59,24 +65,24 @@
         merlin.addImage(merlin_img);
 
         // greaser outfit
-        greaser = createSprite(random(0, width), random(0, height), 20, 80);
-        greaser.shapeColor = color(36, 31, 36);
+        // greaser = createSprite(random(0, width), random(0, height), 20, 80);
+        // greaser.shapeColor = color(36, 31, 36);
+        greaser = createSprite(300, 50, 100, height/2); 
+        jacket_img.resize(0, 100);
+        greaser.addImage(jacket_img);
         greaser.mouseActive = true; // track mouse state
 
         // skirt outfit
-        skirt = createSprite(random(0, width), random(0, height), 50, 30);
-        skirt.shapeColor = color(245, 103, 240);
+        // skirt = createSprite(random(0, width), random(0, height), 50, 30);
+        // skirt.shapeColor = color(245, 103, 240);
+        skirt = createSprite(200, 50, 100, height/2); 
+        skirt_img.resize(0, 100);
+        skirt.addImage(skirt_img);
         skirt.mouseActive = true; // track mouse state
       }
 
       function draw() {
-        background(50);
-        textSize(24);
-        fill(255);
-        text("what would arthur and merlin wear?",
-          width/3, height*0.1);
-        text("drag clothes to dog to find out!",
-          width/5, height*0.2);
+        background(bg_img);
 
         // case: user clicks on greaser
         if (greaser.mouseIsOver && mouseIsPressed) {

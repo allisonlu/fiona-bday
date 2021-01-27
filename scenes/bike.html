@@ -27,7 +27,8 @@
 
       function preload() {
         bike_img = loadImage('../assets/img/4L_bike.png');
-        alissa_img = loadImage('../assets/img/dog-01.png');
+        alissa_img = loadImage('../assets/img/4L_Alissa.png');
+        alissa_on_bike_img = loadImage('../assets/img/4L_Alissa_with_bike.png');
         bg_img = loadImage('../assets/img/4L_apt_exterior_zoomed.jpg');
       }
 
@@ -40,7 +41,7 @@
         bike = createSprite(50, 175); // set initial position
         bike.addImage(bike_img);
 
-        alissa_img.resize(0, 60);
+        alissa_img.resize(0, 150);
         alissa = createSprite(800, 50); // TODO: set initial position
         alissa.addImage(alissa_img);
       }
@@ -60,6 +61,8 @@
         //remove alissa sprite
         alissa.remove();
         //make bike go
+        alissa_on_bike_img.resize(0, 150);
+        bike.addImage(alissa_on_bike_img);
         bike.setSpeed(1.5, 0);
       }
 

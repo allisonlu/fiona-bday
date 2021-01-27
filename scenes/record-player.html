@@ -62,7 +62,7 @@
         //move the shape to the center of the canvas
         translate(-20, 185);
 
-        jitter = random(-15, 15);
+        jitter = random(-20, 20);
 
         angle = angle + jitter;
         rotate(radians(angle));
@@ -74,6 +74,7 @@
       }
 
       function togglePlay() {
+        record_scratch.setVolume(0.4);
         record_scratch.play();
       }
     </script>
