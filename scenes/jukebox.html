@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap"
+      rel="stylesheet"
+      defer
+    />
     <script type="text/javascript" src="../libraries/p5.min.js"></script>
     <script type="text/javascript" src="../libraries/p5.play.js"></script>
     <script type="text/javascript" src="../libraries/p5.sound.min.js"></script>
@@ -14,8 +19,9 @@
       }
 
       button {
-        font-family: Georgia, "Times New Roman", Times, serif;
-        background-color: aliceblue;
+        background: transparent;
+        border: 1px solid rgb(252, 186, 3);
+        border-radius: 5px;
       }
     </style>
   </head>
@@ -57,7 +63,7 @@
         song_index = 0;
 
       // Jukebox and control variables
-      let play_pause, slider, jump_button;
+      let play_pause, jump_button;
       let amp;
       let positionX = canvas_width; // for marquee
 
@@ -82,16 +88,13 @@
 
         // play/pause button
         play_pause = createButton("▶️");
-        play_pause.position(width / 2.7, height / 2);
+        play_pause.position(width / 2.7, height / 1.7);
         play_pause.mousePressed(togglePlay);
 
         // next button
         skip = createButton("⏭️");
-        skip.position(width / 1.9, height / 2);
+        skip.position(width / 1.9, height / 1.7);
         skip.mousePressed(toggleSkip);
-
-        // volume slider
-        slider = createSlider(0, 1, 0.5, 0.01);
 
         // amplitude visual
         amp = new p5.Amplitude();
@@ -127,12 +130,6 @@
         // display song title
         current_song = song_array[song_index];
         displayCurrent();
-
-        // volume control
-        fill(0);
-        textSize(14);
-        text("🔈: ", 0, height);
-        current_song.setVolume(slider.value());
       }
 
       function togglePlay() {
@@ -159,7 +156,7 @@
       }
 
       function displayCurrent() {
-        textFont("Georgia", 24);
+        textFont("Aclonica", 24);
         fill(0);
 
         if (positionX < -250) {
