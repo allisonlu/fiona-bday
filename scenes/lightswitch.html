@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="../libraries/p5.min.js"></script>
+    <!-- <script type="text/javascript" src="../libraries/p5.draggable.js"></script> -->
+    <script type="text/javascript" src="../libraries/p5.play.js"></script>
+    <script type="text/javascript" src="../libraries/p5.sound.min.js"></script>
+    <style>
+      html,
+      body {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        background: white;
+      }
+
+      button {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background-color: aliceblue;
+      }
+
+      #defaultCanvas0 {
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+      /****
+        SCENE 18R: lightswitch scene
+      ****/
+
+      // Canvas variables
+      const canvas_height = 275;
+      const canvas_width = 450;
+      let lightsOn = false;
+
+      function preload() {
+        lightswitch_img_off = loadImage("../assets/img/18R_switch_off.jpg");
+        lightswitch_img_on = loadImage("../assets/img/18R_switch_on.jpg");
+        surprise_audio = loadSound("../assets/audio/interactive/surprise.m4a");
+      }
+
+      function setup() {
+        cnv = createCanvas(canvas_width, canvas_height);
+        background(lightswitch_img_off);
+      }
+
+      function draw() {
+        if (lightsOn) {
+          background(lightswitch_img_on);
+        } else {
+          background(lightswitch_img_off);
+        }
+
+        cnv.mousePressed(changeLight);
+      }
+
+      function changeLight() {
+        if (lightsOn) {
+          lightsOn = false;
+        } else {
+          lightsOn = true;
+          surprise_audio.play();
+        }
+      }
+    </script>
+  </body>
+</html>
