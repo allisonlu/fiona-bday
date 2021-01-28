@@ -1,6 +1,11 @@
 <!doctype html>
 <html>
   <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mali&display=swap"
+      rel="stylesheet"
+      defer
+    />
     <script type="text/javascript" src="../libraries/p5.min.js"></script>
     <script type="text/javascript" src="../libraries/p5.play.js"></script>
     <style>
@@ -9,6 +14,17 @@
         margin: 0;
         padding: 0;
         background:white;
+      }
+
+      button {
+        font-family: "Mali", cursive;
+        font-size: 18px;
+        background: black;
+        color: white;
+        border-radius: 5px;
+        position: relative;
+        top: -139px;
+        left: 223px;
       }
     </style>
   </head>
@@ -52,33 +68,18 @@
       function setup() {
         createCanvas(canvas_width, canvas_height);
 
-        // resize pngs
+        // resize pngs - do once
         arthur_img.resize(0, 200);
         merlin_img.resize(0, 160);
         arthur_success.resize(0, 200);
         merlin_success.resize(0, 160);
 
-        // create sprite with image of dogs
-        arthur = createSprite(100, height/2); 
-        merlin = createSprite(width-100, height/2); 
-        arthur.addImage(arthur_img);
-        merlin.addImage(merlin_img);
+        createSprites();
+        setupSketch();
 
-        // greaser outfit
-        // greaser = createSprite(random(0, width), random(0, height), 20, 80);
-        // greaser.shapeColor = color(36, 31, 36);
-        greaser = createSprite(300, 50, 100, height/2); 
-        jacket_img.resize(0, 100);
-        greaser.addImage(jacket_img);
-        greaser.mouseActive = true; // track mouse state
-
-        // skirt outfit
-        // skirt = createSprite(random(0, width), random(0, height), 50, 30);
-        // skirt.shapeColor = color(245, 103, 240);
-        skirt = createSprite(200, 50, 100, height/2); 
-        skirt_img.resize(0, 100);
-        skirt.addImage(skirt_img);
-        skirt.mouseActive = true; // track mouse state
+        // reset button to play again
+        let reset = createButton('reset');
+        reset.mousePressed(setupSketch);
       }
 
       function draw() {
@@ -100,6 +101,42 @@
         skirt.overlap(merlin, meemee);
 
         drawSprites();
+      }
+
+      /*
+        setupSketch() removes sprites from the previous interaction and sets up fresh sprites in initial positions
+      */
+      function setupSketch() {
+        // remove existing sprites 
+        if (!arthur.removed && !merlin.removed) {
+          arthur.remove();
+          merlin.remove();
+        }
+
+        createSprites();
+      }
+
+      /*
+        createSprites() creates sprites and places them in position
+      */
+      function createSprites() {
+        // create sprite with image of dogs
+        arthur = createSprite(100, height/2); 
+        merlin = createSprite(width-100, height/2); 
+        arthur.addImage(arthur_img);
+        merlin.addImage(merlin_img);
+
+        // greaser outfit
+        greaser = createSprite(300, 50, 100, height/2); 
+        jacket_img.resize(0, 100);
+        greaser.addImage(jacket_img);
+        greaser.mouseActive = true; // track mouse state
+
+        // skirt outfit
+        skirt = createSprite(200, 50, 100, height/2); 
+        skirt_img.resize(0, 100);
+        skirt.addImage(skirt_img);
+        skirt.mouseActive = true; // track mouse state
       }
 
       function ootoo(greaser, arthur) {
