@@ -43,6 +43,10 @@
         key_img.resize(0, 60);
         key = createSprite(800, 50); // TODO: set initial position
         key.addImage(key_img);
+
+        // workaround for bug: set initial position for mouse
+        mouseX = width - 50;
+        mouseY  = height/2;
       }
 
       function draw() {

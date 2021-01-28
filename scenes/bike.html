@@ -42,8 +42,12 @@
         bike.addImage(bike_img);
 
         alissa_img.resize(0, 150);
-        alissa = createSprite(800, 50); // TODO: set initial position
+        alissa = createSprite(canvas_width, canvas_height); // TODO: set initial position
         alissa.addImage(alissa_img);
+
+        // workaround for bug: set initial position for mouse
+        mouseX = 350;
+        mouseY = 130;
       }
 
       function draw() {
