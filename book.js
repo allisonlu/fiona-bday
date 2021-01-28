@@ -157,7 +157,18 @@ setTransform = function (e, v) {
 
   function playNarration(e) {
     audio.src = narrationPlaylist[currentPage - 1];
-    audio.play();
+    
+    // https://developers.google.com/web/updates/2017/06/play-request-was-interrupted
+    var playPromise = audio.play();
+
+    if (playPromise !== undefined) {
+      playPromise.then(_ => {
+        // Automatic playback started!
+      })
+      .catch(error => {
+        // Auto-play was prevented
+      });
+    }
   }
 
   var soundToggle = document.getElementById("sound-toggle");
