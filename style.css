@@ -932,10 +932,10 @@ li {
 /* page 19L */
 /* hotdog  */
 .party__person--left:nth-child(1) {
-  left: 155px;
-  top: 160px;
-  animation-duration: 3.5s;
-  animation-name: swinging-n10;
+  left: 290px;
+  bottom: 0px;
+  animation-duration: 3s;
+  animation-name: swing-dancing-follow;
 }
 
 /* effie */
@@ -956,17 +956,17 @@ li {
 
 /* dillan */
 .party__person--left:nth-child(4) {
-  left: 280px;
+  left: 175px;
   bottom: 10px;
-  animation-duration: 4s;
-  animation-name: swinging-n8;
+  animation-duration: 3s;
+  animation-name: swing-dancing-lead;
 }
 
 /* allison */
 .party__person--left:nth-child(5) {
   left: 350px;
   bottom: 70px;
-  animation-duration: 5s;
+  animation-duration: 3.6s;
   animation-name: swinging-3;
 }
 
@@ -991,7 +991,7 @@ li {
 .party__person--right:nth-child(1) {
   left: 10px;
   bottom: 30px;
-  animation-duration: 4.5s;
+  animation-duration: 4.2s;
   animation-name: swinging-n5;
 }
 
@@ -1007,7 +1007,7 @@ li {
 .party__person--right:nth-child(3) {
   left: 140px;
   top: 40px;
-  animation-duration: 3s;
+  animation-duration: 3.3s;
   animation-name: swinging-0;
 }
 
@@ -1015,7 +1015,7 @@ li {
 .party__person--right:nth-child(4) {
   left: 190px;
   top: 70px;
-  animation-duration: 4s;
+  animation-duration: 5s;
   animation-name: swinging-5;
 }
 
@@ -1023,7 +1023,7 @@ li {
 .party__person--right:nth-child(5) {
   left: 230px;
   bottom: 30px;
-  animation-duration: 3.5s;
+  animation-duration: 3.2s;
   animation-name: swinging-3;
 }
 
@@ -1032,7 +1032,7 @@ li {
   left: 310px;
   bottom: 130px;
   max-height: 80px;
-  animation-duration: 5s;
+  animation-duration: 5.5s;
   animation-name: swinging-5;
 }
 
@@ -1041,7 +1041,7 @@ li {
   left: 350px;
   bottom: 110px;
   max-height: 80px;
-  animation-duration: 2s;
+  animation-duration: 2.9s;
   animation-name: swinging-n8;
 }
 
@@ -1050,11 +1050,38 @@ li {
   left: 400px;
   bottom: 30px;
   max-height: 120px;
-  animation-duration: 3s;
+  animation-duration: 2.8s;
   animation-name: swinging-3;
 }
 
 /* swinging animation speeds and angles */
+
+@keyframes swing-dancing-lead {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(60px, 0);
+    z-index: 1;
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+
+@keyframes swing-dancing-follow {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(-110px, 0);
+    z-index: 2;
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+
 @keyframes swinging-0 {
   0% {
     transform: translate(0, 0px);
