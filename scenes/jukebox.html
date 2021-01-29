@@ -20,8 +20,12 @@
 
       button {
         background: transparent;
-        border: 1px solid rgb(252, 186, 3);
+        border: 2px solid rgb(255, 163, 223);
         border-radius: 5px;
+      }
+
+      button:focus {
+        outline: 2px solid rgb(173, 255, 255);
       }
     </style>
   </head>
@@ -59,10 +63,10 @@
         },
       ];
       let song_array = []; // for p5 sound objects
-      let current_song,
-        song_index = 0;
+      let current_song, song_index = 0;
 
       // Jukebox and control variables
+      let jukebox;
       let play_pause, jump_button;
       let amp;
       let positionX = canvas_width; // for marquee
@@ -75,7 +79,10 @@
           );
         }
 
-        note = loadImage("../assets/img/musical-note.png");
+        jukebox = loadImage("../assets/img/8R_jukebox.jpg");
+        note_black = loadImage("../assets/img/8R_musical-note.png");
+        note_blue = loadImage("../assets/img/8R_musical-note-blue.png");
+        note_pink = loadImage("../assets/img/8R_musical-note-pink.png");
       }
 
       function setup() {
@@ -88,12 +95,12 @@
 
         // play/pause button
         play_pause = createButton("▶️");
-        play_pause.position(width / 2.7, height / 1.7);
+        play_pause.position((width / 2)-38, (height / 2)+8);
         play_pause.mousePressed(togglePlay);
 
         // next button
         skip = createButton("⏭️");
-        skip.position(width / 1.9, height / 1.7);
+        skip.position((width / 2)+8, (height / 2)+8);
         skip.mousePressed(toggleSkip);
 
         // amplitude visual
@@ -104,28 +111,17 @@
         background(255);
 
         // jukebox
-        // shadow
-        fill(48, 37, 11);
-        stroke(184, 154, 64);
-        strokeWeight(5);
-        rect(width / 4 + 20, height / 4 - 10, 200, 300, 100, 100, 0, 0);
-        // actual body
-        fill(82, 63, 18);
-        stroke(252, 186, 3);
-        strokeWeight(5);
-        rect(width / 4, height / 4, 200, 300, 100, 100, 0, 0);
-        // gold bars
-        fill(252, 186, 3);
-        noStroke();
-        rect(width / 2.7, height / 1.5 + 20, 7, 70);
-        rect(width / 2.1, height / 1.5 + 20, 7, 70);
-        rect(width / 1.7, height / 1.5 + 20, 7, 70);
+        image(jukebox, -60, 0);
 
         // fun amplitude viz
         let level = amp.getLevel();
         let size = map(level, 0, 1, 100, 400);
-        fill(235);
-        image(note, width / 3, height / 2.8, size, size);
+        image(note_black, 90, height/2, size/4, size/4);
+        image(note_black, width-80, height/1.5, size/4, size/4);
+        image(note_blue, 10, height-120, size/2, size/2);
+        image(note_blue, width-120, height/4, size, size);
+        image(note_pink, 10, 70, size/2.5, size);
+        image(note_pink, width-80, height-50, size/2.23, size/3);
 
         // display song title
         current_song = song_array[song_index];
@@ -157,7 +153,9 @@
 
       function displayCurrent() {
         textFont("Aclonica", 24);
-        fill(0);
+        fill(224, 157, 200);
+        stroke(0);
+        strokeWeight(2);
 
         if (positionX < -250) {
           positionX = width;
