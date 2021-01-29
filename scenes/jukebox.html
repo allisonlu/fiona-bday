@@ -19,13 +19,22 @@
       }
 
       button {
-        background: transparent;
-        border: 2px solid rgb(255, 163, 223);
+        background: rgb(255, 163, 223);
+        border: none;
         border-radius: 5px;
       }
 
+      button:hover {
+        background: rgb(173, 255, 255);
+      }
+
       button:focus {
-        outline: 2px solid rgb(173, 255, 255);
+        background: rgb(53, 102, 102);
+        outline: 2px solid white;
+      }
+
+      button:active {
+        background: rgb(53, 102, 102);
       }
     </style>
   </head>
@@ -95,12 +104,12 @@
 
         // play/pause button
         play_pause = createButton("▶️");
-        play_pause.position((width / 2)-38, (height / 2)+8);
+        play_pause.position((width / 2)-34, (height / 2)+8);
         play_pause.mousePressed(togglePlay);
 
         // next button
         skip = createButton("⏭️");
-        skip.position((width / 2)+8, (height / 2)+8);
+        skip.position((width / 2)+4, (height / 2)+8);
         skip.mousePressed(toggleSkip);
 
         // amplitude visual
