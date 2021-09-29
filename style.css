@@ -14,46 +14,42 @@ body {
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: #f1d8c1; /* Old browsers */
-  background: -moz-radial-gradient(
-    center,
-    ellipse cover,
-    #f1d8c1 0%,
-    #f9b9c3 100%
-  ); /* FF3.6+ */
-  background: -webkit-gradient(
-    radial,
-    center center,
-    0px,
-    center center,
-    100%,
-    color-stop(0%, #f1d8c1),
-    color-stop(100%, #143)
-  ); /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(
-    center,
-    ellipse cover,
-    #f1d8c1 0%,
-    #f9b9c3 100%
-  ); /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(
-    center,
-    ellipse cover,
-    #f1d8c1 0%,
-    #f9b9c3 100%
-  ); /* Opera 12+ */
-  background: -ms-radial-gradient(
-    center,
-    ellipse cover,
-    #f1d8c1 0%,
-    #f9b9c3 100%
-  ); /* IE10+ */
-  background: radial-gradient(
-    ellipse at center,
-    #f1d8c1 0%,
-    #f9b9c3 100%
-  ); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1d8c1', endColorstr='#F9B9C3',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: #f1d8c1;
+  /* Old browsers */
+  background: -moz-radial-gradient(center,
+      ellipse cover,
+      #f1d8c1 0%,
+      #f9b9c3 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(radial,
+      center center,
+      0px,
+      center center,
+      100%,
+      color-stop(0%, #f1d8c1),
+      color-stop(100%, #143));
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center,
+      ellipse cover,
+      #f1d8c1 0%,
+      #f9b9c3 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center,
+      ellipse cover,
+      #f1d8c1 0%,
+      #f9b9c3 100%);
+  /* Opera 12+ */
+  background: -ms-radial-gradient(center,
+      ellipse cover,
+      #f1d8c1 0%,
+      #f9b9c3 100%);
+  /* IE10+ */
+  background: radial-gradient(ellipse at center,
+      #f1d8c1 0%,
+      #f9b9c3 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1d8c1', endColorstr='#F9B9C3', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
   -webkit-perspective: 2300px;
   -moz-perspective: 2300px;
   -ms-perspective: 2300px;
@@ -64,23 +60,6 @@ body {
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
-}
-
-.page-nav {
-  position: absolute;
-  top: 550px;
-  transition: all 0.3s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  margin-left: 50px;
-}
-
-.page-nav > * {
-  display: inline-block;
-}
-
-.page-nav__container {
-  margin: 0 auto;
-  width: 600px;
 }
 
 .button {
@@ -120,6 +99,7 @@ body {
   flex-wrap: wrap;
   width: 100%;
 }
+
 .col-right,
 .col-left {
   display: flex;
@@ -127,9 +107,11 @@ body {
   flex-basis: 100%;
   flex: 1;
 }
+
 .col-right {
   text-align: left;
 }
+
 .col-left {
   text-align: right;
   margin: 0 20px 0 0;
@@ -155,7 +137,7 @@ body {
   transform-style: preserve-3d;
 }
 
-#myBook .book > div:first-child {
+#myBook .book>div:first-child {
   -webkit-transform: rotateY(-150deg);
   -moz-transform: rotateY(-150deg);
   -ms-transform: rotateY(-150deg);
@@ -164,7 +146,7 @@ body {
 }
 
 .book,
-.book > div {
+.book>div {
   position: absolute;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
@@ -173,7 +155,7 @@ body {
   transform-style: preserve-3d;
 }
 
-.book > div {
+.book>div {
   -webkit-transition: 1s ease-in-out;
   -moz-transition: 1s ease-in-out;
   -ms-transition: 1s ease-in-out;
@@ -182,12 +164,13 @@ body {
 }
 
 /* Front of a page */
-.book > div > div:first-child {
+.book>div>div:first-child {
   background: #ffffff;
   width: 550px;
   height: 350px;
   position: absolute;
-  margin: 25px 25px 25px 0; /* this centers the page vertically within the book covers*/
+  margin: 25px 25px 25px 0;
+  /* this centers the page vertically within the book covers*/
   overflow: hidden;
   -webkit-transform: translate3d(0px, 0px, 0.02px);
   -moz-transform: translate3d(0px, 0px, 0.02px);
@@ -201,12 +184,13 @@ body {
 }
 
 /* Back of a page */
-.book > div > div:last-child {
+.book>div>div:last-child {
   background: #ffffff;
   width: 550px;
   height: 350px;
   position: absolute;
-  margin: 25px 25px 25px 0; /* this centers the page vertically within the book covers*/
+  margin: 25px 25px 25px 0;
+  /* this centers the page vertically within the book covers*/
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
@@ -220,34 +204,34 @@ body {
 }
 
 /* covers */
-.book > div:first-child > div:first-child,
-.book > div:last-child > div:last-child {
-  background: #ffffff; /* Old browsers */
-  background: -moz-linear-gradient(
-    135deg,
-    #8c9ccc 0%,
-    #080f40 100%
-  ); /* FF3.6+ */
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right bottom,
-    color-stop(0%, #8c9ccc),
-    color-stop(100%, #080f40)
-  ); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(
-    135deg,
-    #8c9ccc 0%,
-    #080f40 100%
-  ); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(
-    135deg,
-    #8c9ccc 0%,
-    #080f40 100%
-  ); /* Opera 11.10+ */
-  background: -ms-linear-gradient(135deg, #8c9ccc 0%, #080f40 100%); /* IE10+ */
-  background: linear-gradient(135deg, #8c9ccc 0%, #080f40 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8C9CCC', endColorstr='#080f40',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+.book>div:first-child>div:first-child,
+.book>div:last-child>div:last-child {
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(135deg,
+      #8c9ccc 0%,
+      #080f40 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear,
+      left top,
+      right bottom,
+      color-stop(0%, #8c9ccc),
+      color-stop(100%, #080f40));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(135deg,
+      #8c9ccc 0%,
+      #080f40 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(135deg,
+      #8c9ccc 0%,
+      #080f40 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(135deg, #8c9ccc 0%, #080f40 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #8c9ccc 0%, #080f40 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8C9CCC', endColorstr='#080f40', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
   color: #000000;
   border: 2px solid #000000;
   margin-left: -1px;
@@ -255,12 +239,12 @@ body {
 
   /* ornate border */
   border: 25px solid #b88846;
-  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E")
-    25;
+  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E") 25;
 }
 
 .book__cover {
-  z-index: 100; /* make cover always on top of pages when at very similar depths */
+  z-index: 100;
+  /* make cover always on top of pages when at very similar depths */
 }
 
 /* default font sizes and spacings  */
@@ -318,6 +302,7 @@ h3 {
 .title {
   background-color: #cfd6ea;
 }
+
 .title h1 {
   color: #000000;
   text-shadow: 2px 2px 0px #cfd6ea, 4px 4px 0px #cfd6ea, 6px 6px 0px #cfd6ea;
@@ -431,7 +416,8 @@ p.quote-block .quote--wxtches {
 }
 
 .icon--github {
-  font-size: 0; /* visually hides link text */
+  font-size: 0;
+  /* visually hides link text */
   content: "";
   display: block;
   height: 50px;
@@ -519,6 +505,7 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.02s;
   transform: rotate(45deg);
 }
+
 .icon:hover .spread:nth-child(1) .unit {
   transition-delay: 0.04s;
   transform: rotate(1055deg);
@@ -529,6 +516,7 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.04s;
   transform: rotate(62deg);
 }
+
 .icon:hover .spread:nth-child(2) .unit {
   transition-delay: 0.08s;
   transform: rotate(1035deg);
@@ -539,6 +527,7 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.06s;
   transform: rotate(79deg);
 }
+
 .icon:hover .spread:nth-child(3) .unit {
   transition-delay: 0.12s;
   transform: rotate(1005deg);
@@ -549,6 +538,7 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.08s;
   transform: rotate(96deg);
 }
+
 .icon:hover .spread:nth-child(4) .unit {
   transition-delay: 0.16s;
   transform: rotate(995deg);
@@ -559,6 +549,7 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.1s;
   transform: rotate(113deg);
 }
+
 .icon:hover .spread:nth-child(5) .unit {
   transition-delay: 0.2s;
   transform: rotate(985deg);
@@ -569,6 +560,7 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.12s;
   transform: rotate(130deg);
 }
+
 .icon:hover .spread:nth-child(6) .unit {
   transition-delay: 0.24s;
   transform: rotate(955deg);
@@ -579,6 +571,7 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.14s;
   transform: rotate(147deg);
 }
+
 .icon:hover .spread:nth-child(7) .unit {
   transition-delay: 0.28s;
   transform: rotate(935deg);
@@ -589,6 +582,7 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.16s;
   transform: rotate(164deg);
 }
+
 .icon:hover .spread:nth-child(8) .unit {
   transition-delay: 0.32s;
   transform: rotate(905deg);
@@ -599,6 +593,7 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.18s;
   transform: rotate(181deg);
 }
+
 .icon:hover .spread:nth-child(9) .unit {
   transition-delay: 0.36s;
   transform: rotate(885deg);
@@ -609,6 +604,7 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.2s;
   transform: rotate(198deg);
 }
+
 .icon:hover .spread:nth-child(10) .unit {
   transition-delay: 0.4s;
   transform: rotate(875deg);
@@ -619,6 +615,7 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.22s;
   transform: rotate(215deg);
 }
+
 .icon:hover .spread:nth-child(11) .unit {
   transition-delay: 0.44s;
   transform: rotate(875deg);
@@ -629,6 +626,7 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.24s;
   transform: rotate(232deg);
 }
+
 .icon:hover .spread:nth-child(12) .unit {
   transition-delay: 0.48s;
   transform: rotate(855deg);
@@ -639,6 +637,7 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.26s;
   transform: rotate(249deg);
 }
+
 .icon:hover .spread:nth-child(13) .unit {
   transition-delay: 0.52s;
   transform: rotate(835deg);
@@ -649,6 +648,7 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.28s;
   transform: rotate(266deg);
 }
+
 .icon:hover .spread:nth-child(14) .unit {
   transition-delay: 0.56s;
   transform: rotate(815deg);
@@ -659,6 +659,7 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.3s;
   transform: rotate(283deg);
 }
+
 .icon:hover .spread:nth-child(15) .unit {
   transition-delay: 0.6s;
   transform: rotate(805deg);
@@ -669,6 +670,7 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.32s;
   transform: rotate(300deg);
 }
+
 .icon:hover .spread:nth-child(16) .unit {
   transition-delay: 0.64s;
   transform: rotate(785deg);
@@ -679,6 +681,7 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.34s;
   transform: rotate(317deg);
 }
+
 .icon:hover .spread:nth-child(17) .unit {
   transition-delay: 0.68s;
   transform: rotate(765deg);
@@ -689,6 +692,7 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.36s;
   transform: rotate(334deg);
 }
+
 .icon:hover .spread:nth-child(18) .unit {
   transition-delay: 0.72s;
   transform: rotate(745deg);
@@ -699,6 +703,7 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.38s;
   transform: rotate(351deg);
 }
+
 .icon:hover .spread:nth-child(19) .unit {
   transition-delay: 0.76s;
   transform: rotate(725deg);
@@ -709,6 +714,7 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.4s;
   transform: rotate(368deg);
 }
+
 .icon:hover .spread:nth-child(20) .unit {
   transition-delay: 0.8s;
   transform: rotate(705deg);
@@ -719,10 +725,12 @@ p.quote-block .quote--wxtches {
   transition-delay: 0.42s;
   transform: rotate(385deg);
 }
+
 .icon:hover .spread:nth-child(21) .unit {
   transition-delay: 0.84s;
   transform: rotate(685deg);
 }
+
 /* END .icon:hover */
 
 body,
@@ -745,7 +753,7 @@ li {
   max-width: 150px;
   max-height: 150px;
   border-radius: 20px;
-  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
@@ -825,9 +833,11 @@ li {
   0% {
     transform: translate(0, 0px);
   }
+
   50% {
     transform: translate(0, 15px);
   }
+
   100% {
     transform: translate(0, 0px);
   }
@@ -837,9 +847,11 @@ li {
   0% {
     transform: translate(0, 0px) rotate(-10deg);
   }
+
   50% {
     transform: translate(0, 15px) rotate(-10deg);
   }
+
   100% {
     transform: translate(0, 0px) rotate(-10deg);
   }
@@ -849,9 +861,11 @@ li {
   0% {
     transform: translate(0, 0px) rotate(5deg);
   }
+
   50% {
     transform: translate(0, 15px) rotate(5deg);
   }
+
   100% {
     transform: translate(0, 0px) rotate(5deg);
   }
@@ -861,9 +875,11 @@ li {
   0% {
     transform: translate(0, 0px) rotate(-8deg);
   }
+
   50% {
     transform: translate(0, 15px) rotate(-8deg);
   }
+
   100% {
     transform: translate(0, 0px) rotate(-8deg);
   }
@@ -873,9 +889,11 @@ li {
   0% {
     transform: translate(0, 0px) rotate(-5deg);
   }
+
   50% {
     transform: translate(0, 15px) rotate(-5deg);
   }
+
   100% {
     transform: translate(0, 0px) rotate(-5deg);
   }
@@ -885,9 +903,11 @@ li {
   0% {
     transform: translate(0, 0px) rotate(50deg);
   }
+
   50% {
     transform: translate(0, 15px) rotate(50deg);
   }
+
   100% {
     transform: translate(0, 0px) rotate(50deg);
   }
@@ -897,9 +917,11 @@ li {
   0% {
     transform: translate(0, 0px) rotate(3deg);
   }
+
   50% {
     transform: translate(0, 15px) rotate(3deg);
   }
+
   100% {
     transform: translate(0, 0px) rotate(3deg);
   }
@@ -1060,10 +1082,12 @@ li {
   0% {
     transform: translate(0, 0px);
   }
+
   50% {
     transform: translate(60px, 0);
     z-index: 1;
   }
+
   100% {
     transform: translate(0, 0px);
   }
@@ -1073,10 +1097,12 @@ li {
   0% {
     transform: translate(0, 0px);
   }
+
   50% {
     transform: translate(-110px, 0);
     z-index: 2;
   }
+
   100% {
     transform: translate(0, 0px);
   }
@@ -1086,9 +1112,11 @@ li {
   0% {
     transform: translate(0, 0px);
   }
+
   50% {
     transform: translate(15px, 0);
   }
+
   100% {
     transform: translate(0, 0px);
   }
@@ -1098,9 +1126,11 @@ li {
   0% {
     transform: translate(0, 0px) rotate(-10deg);
   }
+
   50% {
     transform: translate(15px, 5px) rotate(-10deg);
   }
+
   100% {
     transform: translate(0, 0px) rotate(-10deg);
   }
@@ -1110,9 +1140,11 @@ li {
   0% {
     transform: translate(0, 0px) rotate(5deg);
   }
+
   50% {
     transform: translate(15px, -5px) rotate(5deg);
   }
+
   100% {
     transform: translate(0, 0px) rotate(5deg);
   }
@@ -1122,9 +1154,11 @@ li {
   0% {
     transform: translate(0, 0px) rotate(-8deg);
   }
+
   50% {
     transform: translate(10px, -5px) rotate(-8deg);
   }
+
   100% {
     transform: translate(0, 0px) rotate(-8deg);
   }
@@ -1134,9 +1168,11 @@ li {
   0% {
     transform: translate(0, 0px) rotate(-5deg);
   }
+
   50% {
     transform: translate(10px, 0px) rotate(-5deg);
   }
+
   100% {
     transform: translate(0, 0px) rotate(-5deg);
   }
@@ -1146,9 +1182,11 @@ li {
   0% {
     transform: translate(0, 0px) rotate(3deg);
   }
+
   50% {
     transform: translate(10px, 5px) rotate(3deg);
   }
+
   100% {
     transform: translate(0, 0px) rotate(3deg);
   }

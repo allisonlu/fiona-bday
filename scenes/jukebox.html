@@ -40,13 +40,9 @@
   </head>
   <body>
     <script type="text/javascript">
-      /****
-        SCENE 3: song selector for jukebox
-      ****/
-
       // Canvas variables
-      const canvas_height = 300;
-      const canvas_width = 600;
+      const canvas_height = 600;
+      const canvas_width = 700;
 
       // Song variables
       const song_info = [
@@ -56,19 +52,9 @@
           path: "the_columbians_-_just_like_a_rainbow.mp3",
         },
         {
-          name: "Who Let the Dogs Out",
-          artist: "Baha Mxn",
-          path: "who-let-the-dogs-out.m4a",
-        },
-        {
           name: "Gorl Crush",
           artist: "Harry Styles",
           path: "girl-crush.m4a",
-        },
-        {
-          name: "A Very Special Solo",
-          artist: "Alissa S. Fang, age 19",
-          path: "alissa_singing.m4a",
         },
         {
           name: "Baby Won't You Please Come Home",
@@ -93,7 +79,7 @@
           );
         }
 
-        jukebox = loadImage("../assets/img/8R_jukebox.jpg");
+        // jukebox = loadImage("../assets/img/8R_jukebox.jpg");
         note_black = loadImage("../assets/img/8R_musical-note.png");
         note_blue = loadImage("../assets/img/8R_musical-note-blue.png");
         note_pink = loadImage("../assets/img/8R_musical-note-pink.png");
@@ -108,12 +94,14 @@
 
         // play/pause button
         play_pause = createButton("▶️");
-        play_pause.position(225, 168);
+        play_pause.position(width / 3, height / 2);
+        // play_pause.position(225, 168);
         play_pause.mousePressed(togglePlay);
 
         // next button
         skip = createButton("⏭️");
-        skip.position(265, 168);
+        skip.position(width / 3 + 60, height / 2);
+        // skip.position(265, 168);
         skip.mousePressed(toggleSkip);
 
         // amplitude visual
@@ -124,13 +112,30 @@
         background(255);
 
         // jukebox
-        image(jukebox, 0, 0);
+        fill(48, 37, 11);
+        stroke(184, 154, 64);
+        strokeWeight(5);
+        rect(width / 4 + 20, height / 4 - 10, 200, 300, 100, 100, 0, 0);
+        // actual body
+        fill(82, 63, 18);
+        stroke(252, 186, 3);
+        strokeWeight(5);
+        rect(width / 4, height / 4, 200, 300, 100, 100, 0, 0);
+        // gold bars
+        fill(252, 186, 3);
+        noStroke();
+        rect(width / 2.5 - 47, height / 1.5 - 50, 7, 70);
+        rect(width / 2.5, height / 1.5 - 50, 7, 70);
+        rect(width / 2.5 + 47, height / 1.5 - 50, 7, 70);
+
+        // image(jukebox, 0, 0);
 
         // fun amplitude viz
         let level = amp.getLevel();
-        let size = map(level, 0, 1, 100, 400);
+        let size = map(level, 0, 1, 100, 200);
+        ellipse(width/2.5, height/2.5, size, size);
         image(note_black, 120, height/2, size/4, size/4);
-        image(note_black, width-250, height/1.5, size/4, size/4);
+        image(note_black, width-250, height/1.5, size, size);
         image(note_blue, 40, height-120, size/2, size/2);
         image(note_blue, width-200, height/4, size, size);
         image(note_pink, 60, 70, size/2.5, size);
@@ -145,6 +150,8 @@
         if (!current_song.isPlaying()) {
           current_song.play();
           play_pause.html("⏸️");
+          amp = new p5.Amplitude();
+          amp.setInput(sound);
         } else {
           current_song.pause();
           play_pause.html("▶️");
@@ -166,9 +173,10 @@
 
       function displayCurrent() {
         textFont("Aclonica", 24);
-        fill(224, 157, 200);
-        stroke(0);
-        strokeWeight(2);
+        fill(0);
+        // fill(224, 157, 200);
+        // stroke(0);
+        // strokeWeight(2);
 
         if (positionX < -250) {
           positionX = width;
