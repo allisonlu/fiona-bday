@@ -1,14 +1,14 @@
-# alissa-31
+# Fiona's birthday invitation
 An interactive storybook built with p5.js
 
 ## Setup
 ```
-git clone https://github.com/dillantai/alissa-31.git
+git clone [tbd]
 npm install
 ```
 
 ## Deploy
-This project is deployed on [surge.sh](https://surge.sh/) at [alissa-31.surge.sh](http://alissa-31.surge.sh/)
+This project is deployed on [surge.sh](https://surge.sh/) at [tbd](http://tbd.surge.sh/)
 
 ```
 npm run deploy

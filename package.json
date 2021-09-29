@@ -1,7 +1,7 @@
 {
-  "name": "alissa-31",
+  "name": "fiona-birthday",
   "version": "1.0.0",
-  "description": "An interactive storybook built with p5.js",
+  "description": "An digital invitation built with p5.js",
   "main": "index.html",
   "devDependencies": {
     "git-scripts": "0.2.1",
@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "surge --project ./ --domain https://alissa-31.surge.sh"
+    "deploy": "surge --project ./ --domain https://tbd.surge.sh"
   },
   "repository": {
     "type": "git",
