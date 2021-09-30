@@ -15,7 +15,6 @@
         overflow: hidden;
         margin: 0;
         padding: 0;
-        background: white;
       }
 
       button {
@@ -43,11 +42,16 @@
   <body>
     <script type="text/javascript">
       // Canvas variables
-      const canvas_height = 600;
-      const canvas_width = 700;
+      const canvas_height = 550;
+      const canvas_width = 800;
 
       // Song variables
       const song_info = [
+       {
+          name: "Poetic Invitation",
+          artist: "Sierra Downey ",
+          path: "invitation.m4a",
+        },
         {
           name: "Let's Twist Again",
           artist: "Effie Ralli",
@@ -109,10 +113,8 @@
       }
 
       function draw() {
-        background(22, 35, 43, 10);
-
         // radio
-        image(radio, 100, 100, 500, 350);
+        image(radio, 155, 100, 500, 350);
 
         // fun amplitude viz
         let level = amp.getLevel();
