@@ -19,9 +19,11 @@
       }
 
       button {
-        background: rgb(255, 163, 223);
+        background: #eda772;
         border: none;
-        border-radius: 5px;
+        border-radius: 30px;
+        width: 30px;
+        height: 30px;
       }
 
       button:hover {
@@ -65,8 +67,8 @@
       let song_array = []; // for p5 sound objects
       let current_song, song_index = 0;
 
-      // Jukebox and control variables
-      let jukebox;
+      // radio and control variables
+      let radio;
       let play_pause, jump_button;
       let amp;
       let positionX = canvas_width; // for marquee
@@ -79,8 +81,8 @@
           );
         }
 
-        // jukebox = loadImage("../assets/img/8R_jukebox.jpg");
-        note_black = loadImage("../assets/img/8R_musical-note.png");
+        radio = loadImage("../assets/img/radio.png");
+        note_gold = loadImage("../assets/img/music-note-gold.png");
         note_blue = loadImage("../assets/img/8R_musical-note-blue.png");
         note_pink = loadImage("../assets/img/8R_musical-note-pink.png");
       }
@@ -94,14 +96,12 @@
 
         // play/pause button
         play_pause = createButton("▶️");
-        play_pause.position(width / 3, height / 2);
-        // play_pause.position(225, 168);
+        play_pause.position(510, 346);
         play_pause.mousePressed(togglePlay);
 
         // next button
         skip = createButton("⏭️");
-        skip.position(width / 3 + 60, height / 2);
-        // skip.position(265, 168);
+        // skip.position(460, 350);
         skip.mousePressed(toggleSkip);
 
         // amplitude visual
@@ -109,37 +109,23 @@
       }
 
       function draw() {
-        background(255, 255);
+        background(22, 35, 43, 10);
 
-        // jukebox
-        fill(48, 37, 11);
-        stroke(184, 154, 64);
-        strokeWeight(5);
-        rect(width / 4 + 20, height / 4 - 10, 200, 300, 100, 100, 0, 0);
-        // actual body
-        fill(82, 63, 18);
-        stroke(252, 186, 3);
-        strokeWeight(5);
-        rect(width / 4, height / 4, 200, 300, 100, 100, 0, 0);
-        // gold bars
-        fill(252, 186, 3);
-        noStroke();
-        rect(width / 2.5 - 47, height / 1.5 - 50, 7, 70);
-        rect(width / 2.5, height / 1.5 - 50, 7, 70);
-        rect(width / 2.5 + 47, height / 1.5 - 50, 7, 70);
-
-        // image(jukebox, 0, 0);
+        // radio
+        image(radio, 100, 100, 500, 350);
 
         // fun amplitude viz
         let level = amp.getLevel();
         let size = map(level, 0, 1, 100, 200);
-        ellipse(width/2.5, height/2.5, size, size);
-        image(note_black, 120, height/2, size/4, size/4);
-        image(note_black, width-250, height/1.5, size, size);
+        image(note_gold, 60, height/2, size/4, size/4);
+        image(note_gold, width-110, height/1.5, size/1.5, size/2);
         image(note_blue, 40, height-120, size/2, size/2);
-        image(note_blue, width-200, height/4, size, size);
+        image(note_blue, width-100, height/4, size, size);
         image(note_pink, 60, 70, size/2.5, size);
         image(note_pink, width-200, height-100, size/2.23, size/3);
+
+        // display song title
+        current_song = song_array[song_index];
       }
 
       function togglePlay() {
@@ -166,6 +152,7 @@
           }
         }
       }
+
     </script>
   </body>
 </html>

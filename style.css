@@ -62,36 +62,6 @@ body {
   transform-style: preserve-3d;
 }
 
-.button {
-  background-color: transparent;
-  border: none;
-  border-top: 50px solid transparent;
-  border-bottom: 50px solid transparent;
-  cursor: pointer;
-}
-
-.button:focus {
-  outline: none;
-}
-
-.button__previous {
-  border-right: 100px solid deepskyblue;
-  margin-right: 70px;
-}
-
-.button__previous:hover {
-  border-right: 100px solid dodgerblue;
-}
-
-.button__next {
-  border-left: 100px solid deepskyblue;
-  margin-left: 70px;
-}
-
-.button__next:hover {
-  border-left: 100px solid dodgerblue;
-}
-
 /* 2 col layout used on credits page  */
 .col-wrapper {
   display: flex;
