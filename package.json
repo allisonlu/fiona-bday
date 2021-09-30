@@ -9,16 +9,16 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "surge --project ./ --domain https://tbd.surge.sh"
+    "deploy": "surge --project ./ --domain https://queering-time.surge.sh"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dillantai/alissa-31.git"
+    "url": "git+https://github.com/allisonlu/fiona-bday"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dillantai/alissa-31/issues"
+    "url": "https://github.com/allisonlu/fiona-bday/issues"
   },
-  "homepage": "https://github.com/dillantai/alissa-31#readme"
+  "homepage": "https://github.com/allisonlu/fiona-bday#readme"
 }

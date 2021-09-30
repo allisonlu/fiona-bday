@@ -1,14 +1,14 @@
 # Fiona's birthday invitation
-An interactive storybook built with p5.js
+A digital invitation built with p5.js
 
 ## Setup
 ```
-git clone [tbd]
+git clone https://github.com/allisonlu/fiona-bday
 npm install
 ```
 
 ## Deploy
-This project is deployed on [surge.sh](https://surge.sh/) at [tbd](http://tbd.surge.sh/)
+This project is deployed on [surge.sh](https://surge.sh/) at [http://queering-time.surge.sh](http://queering-time.surge.sh/)
 
 ```
 npm run deploy
