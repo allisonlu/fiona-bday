@@ -7,6 +7,18 @@ html {
   zoom: 0.9;
 }
 
+@font-face {
+  font-family: 'DymaxionScript';
+  src: url(./assets/fonts/DymaxionScript.woff);
+  font-size: 26px;
+}
+
+@font-face {
+  font-family: 'Harting';
+  src: url(./assets/fonts/Harting.woff);
+  font-size: 26px;
+}
+
 body {
   display: -webkit-flex;
   display: flex;
@@ -14,52 +26,11 @@ body {
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: #c1875b;
-  /* Old browsers */
-  background: -moz-radial-gradient(center,
-      ellipse cover,
-      #c1875b 0%,
-      #16232b 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(radial,
-      center center,
-      0px,
-      center center,
-      100%,
-      color-stop(0%, #c1875b),
-      color-stop(100%, #143));
-  /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center,
-      ellipse cover,
-      #c1875b 0%,
-      #16232b 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center,
-      ellipse cover,
-      #c1875b 0%,
-      #16232b 100%);
-  /* Opera 12+ */
-  background: -ms-radial-gradient(center,
-      ellipse cover,
-      #c1875b 0%,
-      #16232b 100%);
-  /* IE10+ */
-  background: radial-gradient(ellipse at center,
-      #c1875b 0%,
-      #16232b 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c1875b', endColorstr='#16232b', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
-  -webkit-perspective: 2300px;
-  -moz-perspective: 2300px;
-  -ms-perspective: 2300px;
-  -o-perspective: 2300px;
-  perspective: 2300px;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+
+  background: rgb(22, 35, 43);
+  background: linear-gradient(149deg, rgba(22, 35, 43, 1) 41%, rgba(193, 135, 91, 1) 100%);
+  background-attachment: fixed;
+
 }
 
 /* 2 col layout used on credits page  */
@@ -94,15 +65,22 @@ h3 {
   margin: 0 0 30px;
   color: #eda772;
   text-align: center;
-  font-family: 'American Typewriter';
 }
 
 h1 {
-  font-size: 54px;
+  font-size: 42px;
+  padding-top: 50px;
+  margin: 0;
+  color: white;
+  font-family: 'DymaxionScript';
 }
 
 h2 {
-  font-size: 25px;
+  font-family: 'Harting';
+  font-size: 18px;
+  padding-top: 40px;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 h3 {
@@ -111,10 +89,13 @@ h3 {
 }
 
 .poem {
-  color: #eda772;
+  color: #f7d5bc;
   text-align: center;
-  font-style: italic;
-  font-size: 24px;
+  font-size: 18px;
+  font-family: 'Harting';
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0 0 100px;
 }
 
 /* utility classes for justifying text  */
@@ -157,4 +138,21 @@ h3 {
   cursor: pointer;
   display: inline-block;
   vertical-align: bottom;
+}
+
+@media (min-width: 700px) {
+  h1 {
+    font-size: 94px;
+  }
+
+  h2 {
+    font-size: 27px;
+    max-width: none;
+  }
+
+  .poem {
+    font-size: 24px;
+    max-width: none;
+    padding: 40px 0 100px;
+  }
 }
